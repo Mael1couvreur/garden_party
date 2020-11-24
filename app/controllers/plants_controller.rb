@@ -5,7 +5,8 @@ class PlantsController < ApplicationController
   end
 
   def index
-    @plants = Plant.all
+    # @plants = Plant.all
+    @user_plants = Plant.where(user_id:current_user.id)
   end
 
   private

@@ -1,0 +1,8 @@
+<h1>My garden</h1>
+
+
+<% @user_plants.each do |user_plant| %>
+    <%= user_plant.nickname %>
+    <%= user_plant.created_at %>
+<% end %>
+
