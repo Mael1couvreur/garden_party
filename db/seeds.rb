@@ -68,8 +68,9 @@ puts "users crées"
 puts "Assignations de plantes à nos users"
 
 Plant.create!(nickname: "Boby", like_number: 0, user: user1, plant_information: PlantInformation.all.sample)
+Plant.create!(nickname: "Zeubi", like_number: 0, user: user1, plant_information: PlantInformation.find_by(name: "Monstera"))
 Plant.create!(nickname: "Mimi", like_number: 0, user: user2, plant_information: PlantInformation.all.sample)
-Plant.create!(nickname: "Cracotte", like_number: 0, user: user3, plant_information: PlantInformation.all.sample)
+Plant.create!(nickname: "Cracotte", like_number: 0, user: user3, plant_information: PlantInformation.find_by(name: "Monstera"))
 
 puts "assignation terminé"
 
