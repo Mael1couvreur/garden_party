@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   end
   resources :plants, except: [:show]
   resources :tasks, only: [:index] do
-    resources :actions, only: [:create, :update]
+    resources :actions, only: [:create]
   end
 end
