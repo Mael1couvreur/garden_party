@@ -1,8 +1,10 @@
-<h1>My garden</h1>
-
-
-<% @user_plants.each do |user_plant| %>
-    <%= user_plant.nickname %>
-    <%= user_plant.created_at %>
-<% end %>
+<div class="container">
+    <h1 id="index-plant-title">My garden</h1>
+    <% @user_plants.each do |user_plant| %>
+        <ul>
+            <li><%= user_plant.nickname %></li>
+            <li><%= user_plant.created_at %></li>
+        </ul>
+    <% end %>
+</div>
 
