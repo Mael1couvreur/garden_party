@@ -5,8 +5,9 @@ class PlantsController < ApplicationController
   end
 
   def index
-    # @plants = Plant.all
     @user_plants = Plant.where(user_id:current_user.id)
+    # @creation_date = @user_plant[].created_at.strftime("%d %b. %Y")
+    @now = Time.now
   end
 
   private
