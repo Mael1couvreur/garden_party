@@ -5,8 +5,20 @@
   <% plant.tasks.each do |task| %>
     <p><%= task.name %></p>
     <%= simple_form_for @activity do |f| %>
-      <%= f.input :done %>
-      <%= f.submit class: 'btn btn-primary' %>
+      <%= f.input :plant_id, as: :hidden, input_html: { value: plant.id } %>
+      <%= f.input :task_id, as: :hidden, input_html: { value: task.id } %>
+      <%= f.submit "Fait!", class: 'btn btn-primary' %>
     <% end %>
   <% end %>
 <% end %>
+
+
+
+
+<%# @plants.each do |plant| %>
+  <%# plant.tasks.each do |task| %>
+    <%# Activity.where(user: current_user).before_date(DateTime.now - 3) %>
+    <%#= Activity.where(task_id: task.id) %>
+  <%# end %>
+<%# end %>
+
