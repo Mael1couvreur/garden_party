@@ -7,12 +7,16 @@
     color: black;
 }
 
-#date-creation {
+.plant-age {
     font-size: 12px;
     text-align: center;
     &:hover {
         font-weight: bold;
     }
+}
+
+.plant-age > li {
+    text-align: center;
 }
 
 #index-plant-title {
@@ -52,4 +56,8 @@
     list-style-type: none;
     margin-top: -10px;
     text-decoration: none;
+}
+
+.plant-age {
+    display: flex;
 }

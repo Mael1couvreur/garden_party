@@ -7,10 +7,19 @@
                 <%= image_tag("https://www.deco.fr/sites/default/files/styles/width_880/public/2019-09/plantes%20vertes%20cuisine%201.jpg?itok=pGaTDLyH", id: "photo-user-plant") %>
                     <div class="info-user-plant">
                         <li id="nickname-list-user-plant"><%= user_plant.nickname %></li>
-                        <li id="date-creation"><%creation_date = user_plant.created_at %></li>
-                        <% age_plant = @now - creation_date  %>
-                        <% age_plant_final = age_plant / 86400 %>
-                        <%= age_plant_final.to_i %> <p>jour</p>
+                        <%creation_date = user_plant.created_at %>
+                        <% calcul_date = @now - creation_date  %>
+                        <% age_plant = calcul_date / 86400 %>
+                        <div class="plant-age">
+                            <li><% age_plant_final = age_plant.to_i %>
+                            <% if age_plant_final == 0 %>
+                                Nouvelle pousse
+                            <% elsif age_plant_final > 1 %>
+                                <%= age_plant_final %> jours
+                            <% else %>
+                                <%= age_plant_final %> jour
+                            <% end %></li>
+                        </div>
                     </div>
             </div>
             <%# <%= image_tag("test-jardiniere-copie.png", id: "jardiniere-user-plant") %> 
