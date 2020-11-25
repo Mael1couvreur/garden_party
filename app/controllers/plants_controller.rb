@@ -6,7 +6,7 @@ class PlantsController < ApplicationController
 
   def index
     # @plants = Plant.all
-    @user_plants = Plant.where(user_id:current_user.id)
+    @user_plants = Plant.where(user_id: current_user.id)
   end
 
   private
