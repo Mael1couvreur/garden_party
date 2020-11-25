@@ -1,7 +1,7 @@
 class PlantsController < ApplicationController
   def show
     @plant = Plant.find(params[:id])
-    raise
+    @samePlant = Plant.where(plant_information_id: @plant.plant_information_id)
   end
 
   def index
@@ -13,5 +13,4 @@ class PlantsController < ApplicationController
   def plants_params
     params.require(:plant).permit(:user_id, :plant_information_id, :like_number)
   end
-
 end
