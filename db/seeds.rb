@@ -77,9 +77,9 @@ puts "assignation terminé"
 puts "création des taches"
 
 PlantInformation.all.each do |plant_information|
-  Task.create!(name: "Arroser abondamment", score: 10, intervalle: rand(1..4), plant_information: plant_information)
-  Task.create!(name: "Arracher les mauvaises herbes", score: 8, intervalle: rand(1..4), plant_information: plant_information)
-  Task.create!(name: "Chanter une berceuse", score: 5, intervalle: rand(1..4), plant_information: plant_information)
+  Task.create!(name: "Arroser abondamment", score: 10, intervalle: 1, plant_information: plant_information)
+  Task.create!(name: "Arracher les mauvaises herbes", score: 8, intervalle: 2, plant_information: plant_information)
+  Task.create!(name: "Chanter une berceuse", score: 5, intervalle: 3, plant_information: plant_information)
 end
 
 puts "taches créées"
