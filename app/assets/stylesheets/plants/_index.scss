@@ -1,3 +1,63 @@
+#content-user-plants {
+    display: flex;
+}
+
+#content-user-plants > a {
+    text-decoration: none;
+    color: black;
+}
+
+.plant-age {
+    font-size: 12px;
+    text-align: center;
+    &:hover {
+        font-weight: bold;
+    }
+}
+
+.plant-age > li {
+    text-align: center;
+}
+
 #index-plant-title {
-    
+    margin-top: 15px;
+    text-align: center;
+}
+
+#nickname-list-user-plant{
+    text-align: center;
+    font-weight: bold;
+}
+
+#photo-user-plant {
+    width: 130px;
+    height: 130px;
+    margin: 10px 15px;
+    border-radius: 20px;
+}
+
+
+.img-info-user-plant {
+    border-radius: 15px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    margin-right: 15px;
+    margin-top: 10px;
+    &:hover {
+        font-weight: bold;
+        box-shadow: 5px 5px 16px rgba(0,0,0,0.3);
+    }
+}
+
+.info-user-plant {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 16px;
+    font-weight: 100;
+    list-style-type: none;
+    margin-top: -10px;
+    text-decoration: none;
+}
+
+.plant-age {
+    display: flex;
 }
