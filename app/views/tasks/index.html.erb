@@ -1,5 +1,10 @@
+<h2>Hello <%= current_user.first_name %>, tu as du boulot :</h2>
 <% current_user.plants.each do |plant| %>
+  <h4> <%= plant.nickname %> </h4>
   <% plant.tasks.each do |task| %>
-    <h2><%= task.name %></h2>
+    <p><%= task.name %></p>
+    <%= form_tag(user_task_actions_path(current_user, task.id)) do %>
+      <%= submit_tag 'Fait!' %>
+    <% end %>
   <% end %>
 <% end %>
