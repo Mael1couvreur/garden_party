@@ -1,7 +1,13 @@
 class TasksController < ApplicationController
   def index
     @plants = Plant.where(user: current_user)
-    @action = Action.new
+    @activity = Activity.new
+  end
+
+  private
+
+  def task_params
+    params.require(:task).permit(:name)
   end
 end
 

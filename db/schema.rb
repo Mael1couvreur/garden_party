@@ -15,14 +15,14 @@ ActiveRecord::Schema.define(version: 2020_11_24_115925) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "actions", force: :cascade do |t|
+  create_table "activities", force: :cascade do |t|
     t.boolean "done"
     t.bigint "plant_id", null: false
     t.bigint "task_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["plant_id"], name: "index_actions_on_plant_id"
-    t.index ["task_id"], name: "index_actions_on_task_id"
+    t.index ["plant_id"], name: "index_activities_on_plant_id"
+    t.index ["task_id"], name: "index_activities_on_task_id"
   end
 
   create_table "plant_informations", force: :cascade do |t|
@@ -72,8 +72,8 @@ ActiveRecord::Schema.define(version: 2020_11_24_115925) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "actions", "plants"
-  add_foreign_key "actions", "tasks"
+  add_foreign_key "activities", "plants"
+  add_foreign_key "activities", "tasks"
   add_foreign_key "plants", "plant_informations"
   add_foreign_key "plants", "users"
   add_foreign_key "tasks", "plant_informations"
