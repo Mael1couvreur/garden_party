@@ -1,5 +1,12 @@
-<% current_user.plants.each do |plant| %>
+<h2>Hello <%= current_user.first_name %>, tu as du boulot :</h2>
+
+<% @plants.each do |plant| %>
+  <h4> <%= plant.nickname %> </h4>
   <% plant.tasks.each do |task| %>
-    <h2><%= task.name %></h2>
+    <p><%= task.name %></p>
+    <%= simple_form_for @activity do |f| %>
+      <%= f.input :done %>
+      <%= f.submit class: 'btn btn-primary' %>
+    <% end %>
   <% end %>
 <% end %>
