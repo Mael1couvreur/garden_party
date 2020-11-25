@@ -1,10 +1,8 @@
 class ActionsController < ApplicationController
   def create
-    @user = User.find(params[:user_id])
-    @task = Task.find(params[:task_id])
     action = Action.new(action_params)
     action.save!
-    redirect_to user_task_actions_path(@user, @task)
+    redirect_to task_actions_path(@task)
   end
 
   private
