@@ -27,9 +27,9 @@
 <div class="container">
   <% counter = 0 %>
   <% while counter < 4 do %>
-    <div class="dateBloc mb-5">
+    <div class="dateBloc">
       <% dayDate = DateTime.now + counter.day%>
-      <h4> <%= dayDate.strftime("%A %-d") %> </h4>
+      <h4 class="date-task"> <%= dayDate.strftime("%A %-d") %> </h4>
       <% @plants.each do |plant| %>
         <h4> <%= plant.nickname %> </h4>
         <% plant.tasks.each do |task| %>
@@ -37,7 +37,7 @@
           <% if ((task.intervalle - decalage) % task.intervalle == 0) %>
             <div class="tache-block">
               <p><%= task.name %></p>
-              <%= simple_form_for @activity do |f| %>
+              <%= simple_form_for @activity, remote: true do |f| %>
                 <%= f.input :plant_id, as: :hidden, input_html: { value: plant.id } %>
                 <%= f.input :task_id, as: :hidden, input_html: { value: task.id } %>
                 <%= f.submit "Fait!", class: 'btn btn-primary btn-task' %>
@@ -52,10 +52,4 @@
   <% end %>
 </div>
 
-<script>
-  document.querySelectorAll("btn-task").forEach((btn) => {
-    btn.addEventListener("click", (event) => {
-      event.currentTarget.classList.toggle("hide-task");
-    });
-  });
-</script>
+
