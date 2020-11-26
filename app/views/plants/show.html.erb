@@ -89,7 +89,8 @@
         <% if plant.nickname == @plant.nickname %>
         <% else %>
         <div class="neighbour">
-          <h5><%= plant.nickname %></h5>
+          <% user = User.find(@plant.user_id) %>
+          <h5><%= user.first_name %></h5>
           <img src="https://png.pngtree.com/png-vector/20190130/ourmid/pngtree-hand-drawn-noise-illustration-green-potted-plant-green-leaf-design-element-png-image_609728.jpg" alt="">
         </div>
         <% end %>

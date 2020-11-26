@@ -91,6 +91,8 @@ user1 = User.create!(
   score: 0,
   email: "vio@gmail.com",
   password: "abcdef")
+file = URI.open('https://avatars1.githubusercontent.com/u/70322815?v=4')
+user1.photo.attach(io: file, filename: 'user1.jpg', content_type: 'image/jpeg')
 
 user2 = User.create!(
   first_name: "Mael",
@@ -98,6 +100,8 @@ user2 = User.create!(
   score: 0,
   email: "mael@gmail.com",
   password: "abcdef")
+file = URI.open('https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1601908758/rtos8nfz2zacii2dndkc.jpg')
+user2.photo.attach(io: file, filename: 'user2.jpg', content_type: 'image/jpeg')
 
 user3 = User.create!(
   first_name: "Hugo",
@@ -105,6 +109,8 @@ user3 = User.create!(
   score: 0,
   email: "hugo@gmail.com",
   password: "abcdef")
+file = URI.open('https://avatars0.githubusercontent.com/u/69712961?v=4')
+user3.photo.attach(io: file, filename: 'user3.jpg', content_type: 'image/jpeg')
 
 puts "users crées"
 
