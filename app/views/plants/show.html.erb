@@ -1,11 +1,10 @@
 <div class="div-master">
-  <div class="plant-picture" style="background-image: url('<%= cl_image_path @plant.photo.key, height: 300, width: 375, crop: :fill %>')">
-  </div>
+  <div class="plant-picture"></div>
 
   <div class="principal-infos">
     <h1><%= @plant.nickname %></h1>
     <h3><%= @plant.plant_information.name %> - <%= @plant.plant_information.family%></h3>
-    <p><%= @plant.plant_information.name.age_in_days %>jours</p>
+    <p>6 mois et 12 jours</p>
   </div>
 
   <div class="detailed-infos">
@@ -20,9 +19,9 @@
             <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
             </svg>
           </div>
-          <h4>Difficulté</h4>
+          <h4>Difficulty</h4>
         </div>
-        <p><%= @plant.plant_information.difficulty %></p>
+        <p>easy</p>
       </div>
 
       <div class="requirement-line">
@@ -35,7 +34,7 @@
           </div>
           <h4>Sunlight</h4>
         </div>
-        <p><%= @plant.plant_information.sunlight %></p>
+        <p>indirect</p>
       </div>
 
       <div class="requirement-line">
@@ -48,7 +47,7 @@
           </div>
           <h4>Water</h4>
         </div>
-        <p><%= @plant.plant_information.water %></p>
+        <p>moderate</p>
       </div>
 
       <div class="requirement-line">
@@ -62,7 +61,7 @@
           </div>
           <h4>Room Temp.</h4>
         </div>
-        <p><%= @plant.plant_information.min_room_temperature %>-<%= @plant.plant_information.max_room_temperature %></p>
+        <p>16 - 25°C</p>
       </div>
 
       <div class="requirement-line">
@@ -75,7 +74,7 @@
           </div>
           <h4>Growth months</h4>
         </div>
-        <div class="requirement-value"><%= @plant.plant_information.start_growth_month %> - <%= @plant.plant_information.end_growth_month %></div>
+        <div class="requirement-value">November - December</div>
       </div>
 
     </div>
@@ -91,7 +90,8 @@
         <div class="neighbour">
           <h5><%= plant.nickname %></h5>
           <img src="https://png.pngtree.com/png-vector/20190130/ourmid/pngtree-hand-drawn-noise-illustration-green-potted-plant-green-leaf-design-element-png-image_609728.jpg" alt="">
-        </div>
+          <%# <div class="plant-neighbour-photo"></div>
+        </div> %>
         <% end %>
       <% end %>
     </div>

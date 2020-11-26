@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_26_143051) do
+ActiveRecord::Schema.define(version: 2020_11_26_103424) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,13 +53,6 @@ ActiveRecord::Schema.define(version: 2020_11_26_143051) do
     t.text "picture"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "difficulty"
-    t.string "sunlight"
-    t.string "water"
-    t.integer "min_room_temperature"
-    t.integer "max_room_temperature"
-    t.string "start_growth_month"
-    t.string "end_growth_month"
   end
 
   create_table "plants", force: :cascade do |t|
@@ -69,7 +62,6 @@ ActiveRecord::Schema.define(version: 2020_11_26_143051) do
     t.bigint "plant_information_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "age_in_days"
     t.index ["plant_information_id"], name: "index_plants_on_plant_information_id"
     t.index ["user_id"], name: "index_plants_on_user_id"
   end
