@@ -1,22 +1,27 @@
 <div class="navbar-garden">
-  <div class="navbar-icon-block">
+
+  <div class="navbar-icon-block <%#= "block-active" if action_name == "index"%> ">
     <%= link_to tasks_path do %>
       <i class="far fa-calendar-alt fa-2x navbar-icon"></i>
     <% end %>
   </div>
-  <div class="navbar-icon-block block-active">
+
+  <div class="navbar-icon-block">
     <%= link_to plants_path do %>
       <i class="fas fa-seedling fa-2x navbar-icon"></i>
     <% end %>
   </div>
+
   <div class="navbar-icon-block">
     <%= link_to plants_path do %>
       <i class="fas fa-users fa-2x navbar-icon"></i>
     <% end %>
   </div>
+
   <div class="navbar-icon-block">
     <%= link_to plants_path do %>
       <i class="fas fa-comment fa-2x navbar-icon"></i>
     <% end %>
   </div>
+
 </div>
