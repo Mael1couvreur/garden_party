@@ -65,3 +65,24 @@
 .plant-age {
     display: flex;
 }
+
+#btn-add-new-plant {
+    border: 1px solid green;
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 25px;
+    margin-left: 25px;
+    background-color: white;
+    font-size: 12px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+        &:hover {
+            background-color: #e2e2e2;
+            border: 2px solid green;
+            font-weight: bold;
+        }
+    }
+
+    #btn-add-new-plant > a {
+        color: green;
+    }
