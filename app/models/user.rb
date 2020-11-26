@@ -6,4 +6,7 @@ class User < ApplicationRecord
 
   has_many :plants
   has_many :activities, through: :plants
+
+  has_one_attached :photo
+
 end
