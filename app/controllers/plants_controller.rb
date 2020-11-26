@@ -12,9 +12,24 @@ class PlantsController < ApplicationController
 
   end
 
+  def new
+    @plant = Plant.new
+  end
+
+  def create
+    @plant = Plant.new(plants_params)
+    @plant.user = current_user
+    @plant.plant_information = PlantInformation.find(params[:plant]["plant_information"])
+    if @plant.save 
+      redirect_to plants_path
+    else 
+      render :new
+    end
+  end
+
   private
 
   def plants_params
-    params.require(:plant).permit(:user_id, :plant_information_id, :like_number)
+    params.require(:plant).permit(:user_id, :like_number, :nickname, :photo)
   end
 end

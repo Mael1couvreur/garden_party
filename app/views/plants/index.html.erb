@@ -4,7 +4,7 @@
         <div id ="content-user-plants" class="card-deck flex-row flex-nowrap">
             <a href="http://google.com">
             <div class="img-info-user-plant">
-                <%= image_tag("https://www.deco.fr/sites/default/files/styles/width_880/public/2019-09/plantes%20vertes%20cuisine%201.jpg?itok=pGaTDLyH", id: "photo-user-plant") %>
+                <%= cl_image_tag user_plant.photo.key, crop: :fill, id:"photo-user-plant" %>
                     <div class="info-user-plant">
                         <li id="nickname-list-user-plant"><%= user_plant.nickname %></li>
                         <%creation_date = user_plant.created_at %>

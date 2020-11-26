@@ -4,4 +4,6 @@ class Plant < ApplicationRecord
 
   has_many :activities
   has_many :tasks, through: :plant_information
+  
+  has_one_attached :photo
 end
