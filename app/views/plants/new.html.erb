@@ -1,0 +1,16 @@
+<div class="container">
+
+    <h1 id="title-form-new-plant">Ma plante</h1>
+
+    <div class="form-new-plant">
+        <%= simple_form_for(@plant) do |f| %>
+            <%= f.input :photo, as: :file %> 
+            <div class="infos-form-plant-new">
+                <%= f.input :nickname %> 
+                <%= f.input :plant_information %>  
+            </div>
+            <%= f.submit "Créer ma plante", id:"btn-form-new-plant" %>
+        <% end %>
+    </div>
+
+</div>
