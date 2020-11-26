@@ -7,7 +7,7 @@ class ActivitiesController < ApplicationController
     activity.plant = plant
     activity.task = task
     activity.save!
-    redirect_to tasks_path
+    # redirect_to tasks_path
   end
 
   private

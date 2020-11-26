@@ -29,6 +29,9 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
-  // Call your functions here, e.g:
-  // initSelect2();
+  document.querySelectorAll(".btn-task").forEach((btn) => {
+    btn.addEventListener("click", (event) => {
+      event.currentTarget.parentNode.parentNode.classList.toggle("hide-task");
+    });
+  });
 });
