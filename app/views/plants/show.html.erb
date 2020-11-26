@@ -5,7 +5,7 @@
   <div class="principal-infos">
     <h1><%= @plant.nickname %></h1>
     <h3><%= @plant.plant_information.name %> - <%= @plant.plant_information.family%></h3>
-    <p><%= @plant.plant_information.name.age_in_days %>jours</p>
+    <p><%= @plant.age_in_days %> jours</p>
   </div>
 
   <div class="detailed-infos">
@@ -62,7 +62,7 @@
           </div>
           <h4>Room Temp.</h4>
         </div>
-        <p><%= @plant.plant_information.min_room_temperature %>-<%= @plant.plant_information.max_room_temperature %></p>
+        <p><%= @plant.plant_information.min_room_temperature %>-<%= @plant.plant_information.max_room_temperature %>°C</p>
       </div>
 
       <div class="requirement-line">
