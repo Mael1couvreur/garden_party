@@ -27,15 +27,22 @@
 <div class="container">
   <% counter = 0 %>
   <% while counter < 4 do %>
-    <div class="dateBloc mb-5">
+    <div class="dateBloc">
       <% dayDate = DateTime.now + counter.day%>
-      <h4> <%= dayDate.strftime("%A %-d") %> </h4>
+      <h4 class="date-task"> <%= dayDate.strftime("%A %-d") %> </h4>
       <% @plants.each do |plant| %>
         <h4> <%= plant.nickname %> </h4>
         <% plant.tasks.each do |task| %>
           <% decalage = ((-(plant.created_at - dayDate))/84600).floor  %>
           <% if ((task.intervalle - decalage) % task.intervalle == 0) %>
-            <p><%= task.name %></p>
+            <div class="tache-block">
+              <p><%= task.name %></p>
+              <%= simple_form_for @activity, remote: true do |f| %>
+                <%= f.input :plant_id, as: :hidden, input_html: { value: plant.id } %>
+                <%= f.input :task_id, as: :hidden, input_html: { value: task.id } %>
+                <%= f.submit "Fait!", class: 'btn btn-primary btn-task' %>
+              <% end %>
+            </div>
           <% end %>
         <% end %>
       <% end %>
@@ -44,3 +51,5 @@
     <% counter += 1 %>
   <% end %>
 </div>
+
+
