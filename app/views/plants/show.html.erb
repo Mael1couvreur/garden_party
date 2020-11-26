@@ -1,10 +1,11 @@
 <div class="div-master">
-  <div class="plant-picture"></div>
+  <div class="plant-picture" style="background-image: url('<%= cl_image_path @plant.photo.key, height: 300, width: 375, crop: :fill %>')">
+  </div>
 
   <div class="principal-infos">
     <h1><%= @plant.nickname %></h1>
     <h3><%= @plant.plant_information.name %> - <%= @plant.plant_information.family%></h3>
-    <p>6 mois et 12 jours</p>
+    <p><%= @plant.plant_information.name.age_in_days %>jours</p>
   </div>
 
   <div class="detailed-infos">
