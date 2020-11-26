@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require "open-uri"
+
 puts "destruction des données"
 Task.destroy_all
 Plant.destroy_all
@@ -20,9 +22,9 @@ PlantInformation.create!(
     description: "Le célèbre cocotier, Cocos nucifera est un palmier de climat tropical, il appartient à la famille des Arécacées. Il est originaire des Iles du Pacifique, distribué sur de nombreuses zones côtières.",
     min_room_temperature: 10,
     max_room_temperature: 40,
-    sunlight: "direct",
-    difficulty: "facile",
-    water: "besoin élevé",
+    sunlight: "Direct",
+    difficulty: "Facile",
+    water: "Besoin élevé",
     start_growth_month: "Juin",
     end_growth_month: "Aout"
   )
@@ -33,9 +35,9 @@ PlantInformation.create!(
     description: "Contrairement aux croyances populaires, les Cactacées ne sont pas considérés comme étant des arbres. Les cactus couvrent un large éventail de formes et de tailles.",
     min_room_temperature: 5,
     max_room_temperature: 30,
-    sunlight: "indirect / direct",
-    difficulty: "facile",
-    water: "besoin faible",
+    sunlight: "Indirect / Direct",
+    difficulty: "Facile",
+    water: "Besoin faible",
     start_growth_month: "Avril",
     end_growth_month: "Août"
   )
@@ -46,9 +48,9 @@ PlantInformation.create!(
     description: "Le genre Tulipa comprend une centaine d’espèces distribuées en Europe, de l’Asie occidentale à l’Asie centrale et en Afrique du Nord. ",
     min_room_temperature: 15,
     max_room_temperature: 25,
-    sunlight: "indirect / direct",
-    difficulty: "normal",
-    water: "besoin modéré",
+    sunlight: "Indirect / Direct",
+    difficulty: "Normal",
+    water: "Besoin modéré",
     start_growth_month: "Juillet",
     end_growth_month: "Octobre"
   )
@@ -59,9 +61,9 @@ PlantInformation.create!(
     description: "Merveilleuse plante d’intérieur, le monstera est l’une des plantes d’intérieur les plus vendues mais aussi l’une des plus résistantes et donc facile à cultiver.",
     min_room_temperature: 10,
     max_room_temperature: 25,
-    sunlight: "indirect",
-    difficulty: "facile",
-    water: "besin modéré",
+    sunlight: "Indirect",
+    difficulty: "Facile",
+    water: "Besoin modéré",
     start_growth_month: "Octobre",
     end_growth_month: "Avril"
   )
@@ -72,9 +74,9 @@ PlantInformation.create!(
     description: "La ‘Mara des bois’ offre des petits fruits ((10g) précoces, coniques, rouge foncé et brillant.",
     min_room_temperature: 10,
     max_room_temperature: 25,
-    sunlight: "indirect",
-    difficulty: "facile",
-    water: "besoin modéré",
+    sunlight: "Indirect",
+    difficulty: "Facile",
+    water: "Besoin modéré",
     start_growth_month: "Avril",
     end_growth_month: "Juin"
   )
