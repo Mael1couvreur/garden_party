@@ -3,11 +3,17 @@
     <h1 id="title-form-new-plant">Ma plante</h1>
 
     <div class="form-new-plant">
-        <%= simple_form_for(@plant) do |f| %>
-            <%= f.input :photo, as: :file %> 
+        <%= simple_form_for [ @plant ] do |f| %>
+            <label id="photo-new-plant", class="border p-5">
+            <i id="icone-add-photo", class="fas fa-seedling fa-2x navbar-icon"></i>
+            <i id="icone-app-photo" class="fas fa-camera"></i>
+                <div class="d-none">
+                    <%= f.input :photo, as: :file, label: false %> 
+                </div>
+            </label>
             <div class="infos-form-plant-new">
-                <%= f.input :nickname %> 
-                <%= f.input :plant_information %>  
+                <%= f.input :nickname, label: false, placeholder: "Surnom", input_html: { class: 'champ-form' } %> 
+                <%= f.input :plant_information, label: false, placeholder: "Catégorie", input_html: { class: 'champ-form' }  %> 
             </div>
             <%= f.submit "Créer ma plante", id:"btn-form-new-plant" %>
         <% end %>

@@ -1,0 +1,64 @@
+.champ-form {
+    border: 0px;
+    border-bottom: 1px solid green;
+    background-color: #f4f4f4;
+    margin-top: 40px;
+    &:hover {
+        background-color: #e2e2e2;
+        border: 2px solid green;
+        border-radius: 10px;
+    }
+}
+
+.form-new-plant{
+    border: 0px;
+}
+
+.infos-form-plant-new {
+    margin-top: 30px;
+}
+
+#btn-form-new-plant {
+border: 1px solid green;
+padding: 10px;
+border-radius: 15px;
+margin-top: 25px;
+margin-left: 94px;
+    &:hover {
+        background-color: #e2e2e2;
+        border: 2px solid green;
+    }
+}
+
+#icone-add-photo {
+font-size: 80px;
+margin-left: -7px;
+margin-top: -10px;
+}
+
+#icone-app-photo {
+    font-size: 20px;
+    position: absolute;
+    top: 317px;
+    left: 227px;
+}
+
+#photo-new-plant {
+    background-color: white;
+    width: 160px;
+    height: 160px;
+    margin-left: 87px;
+    border-radius: 15px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    // border-color: green;
+    &:hover {
+        font-weight: bold;
+        box-shadow: 5px 5px 16px rgba(0,0,0,0.3);
+    }
+}
+
+#title-form-new-plant {
+    text-align: center;
+    margin: 25px;
+    margin-bottom: 50px;
+}
