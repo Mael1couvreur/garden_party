@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_24_115925) do
+ActiveRecord::Schema.define(version: 2020_11_26_102408) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,13 @@ ActiveRecord::Schema.define(version: 2020_11_24_115925) do
     t.text "picture"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "difficulty"
+    t.string "sunlight"
+    t.string "water"
+    t.integer "min_room_temperature"
+    t.integer "max_room_temperature"
+    t.string "start_growth_month"
+    t.string "end_growth_month"
   end
 
   create_table "plants", force: :cascade do |t|
