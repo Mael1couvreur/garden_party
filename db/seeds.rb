@@ -21,10 +21,10 @@ PlantInformation.create!(
     min_room_temperature: 10,
     max_room_temperature: 40,
     sunlight: "direct",
-    difficulty: "easy",
-    water: "high",
-    start_month_grow: "June",
-    end_month_grow: "August"
+    difficulty: "facile",
+    water: "besoin élevé",
+    start_growth_month: "Juin",
+    end_growth_month: "Aout"
   )
 
 PlantInformation.create!(
@@ -34,10 +34,10 @@ PlantInformation.create!(
     min_room_temperature: 5,
     max_room_temperature: 30,
     sunlight: "indirect / direct",
-    difficulty: "easy",
-    water: "low",
-    start_month_grow: "April",
-    end_month_grow: "August"
+    difficulty: "facile",
+    water: "besoin faible",
+    start_growth_month: "Avril",
+    end_growth_month: "Août"
   )
 
 PlantInformation.create!(
@@ -48,9 +48,9 @@ PlantInformation.create!(
     max_room_temperature: 25,
     sunlight: "indirect / direct",
     difficulty: "normal",
-    water: "moderate",
-    start_month_grow: "July",
-    end_month_grow: "October"
+    water: "besoin modéré",
+    start_growth_month: "Juillet",
+    end_growth_month: "Octobre"
   )
 
 PlantInformation.create!(
@@ -60,10 +60,10 @@ PlantInformation.create!(
     min_room_temperature: 10,
     max_room_temperature: 25,
     sunlight: "indirect",
-    difficulty: "easy",
-    water: "moderate",
-    start_month_grow: "October",
-    end_month_grow: "April"
+    difficulty: "facile",
+    water: "besin modéré",
+    start_growth_month: "Octobre",
+    end_growth_month: "Avril"
   )
 
 PlantInformation.create!(
@@ -73,10 +73,10 @@ PlantInformation.create!(
     min_room_temperature: 10,
     max_room_temperature: 25,
     sunlight: "indirect",
-    difficulty: "easy",
-    water: "moderate",
-    start_month_grow: "April",
-    end_month_grow: "June"
+    difficulty: "facile",
+    water: "besoin modéré",
+    start_growth_month: "Avril",
+    end_growth_month: "Juin"
   )
 
 puts "plant_informations crées"
