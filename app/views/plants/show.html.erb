@@ -89,8 +89,13 @@
         <% if plant.nickname == @plant.nickname %>
         <% else %>
         <div class="neighbour">
-          <h5><%= plant.nickname %></h5>
-          <img src="https://png.pngtree.com/png-vector/20190130/ourmid/pngtree-hand-drawn-noise-illustration-green-potted-plant-green-leaf-design-element-png-image_609728.jpg" alt="">
+          <% user = User.find(plant.user_id) %>
+          <div class="user-name-and-photo">
+            <div id="photo" style="background-image: url('<%= cl_image_path user.photo.key, height: 300, width: 375, crop: :fill %>')">
+            </div>
+            <h5><%= user.first_name %></h5>
+          </div>
+          <img src="<%= cl_image_path plant.photo.key, height: 300, width: 375, crop: :fill %>" alt="">
         </div>
         <% end %>
       <% end %>

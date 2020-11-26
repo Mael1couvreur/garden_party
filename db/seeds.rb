@@ -91,6 +91,8 @@ user1 = User.create!(
   score: 0,
   email: "vio@gmail.com",
   password: "abcdef")
+file = URI.open('https://avatars1.githubusercontent.com/u/70322815?v=4')
+user1.photo.attach(io: file, filename: 'user1.jpg', content_type: 'image/jpeg')
 
 user2 = User.create!(
   first_name: "Mael",
@@ -98,6 +100,8 @@ user2 = User.create!(
   score: 0,
   email: "mael@gmail.com",
   password: "abcdef")
+file = URI.open('https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1601908758/rtos8nfz2zacii2dndkc.jpg')
+user2.photo.attach(io: file, filename: 'user2.jpg', content_type: 'image/jpeg')
 
 user3 = User.create!(
   first_name: "Hugo",
@@ -105,6 +109,8 @@ user3 = User.create!(
   score: 0,
   email: "hugo@gmail.com",
   password: "abcdef")
+file = URI.open('https://avatars0.githubusercontent.com/u/69712961?v=4')
+user3.photo.attach(io: file, filename: 'user3.jpg', content_type: 'image/jpeg')
 
 puts "users crées"
 
@@ -130,17 +136,21 @@ plant5 = Plant.create!(nickname: "Loulou", like_number: 0, user: user2, plant_in
 file = URI.open('https://www.cdiscount.com/pdt2/8/2/6/2/550x550/non3560234531826/rw/cactus-nomade-en-pot-42cm-existe-en-2-modeles.jpg')
 plant5.photo.attach(io: file, filename: 'plant5.jpg', content_type: 'image/jpeg')
 
-plant6 = Plant.create!(nickname: "Salamèche", like_number: 0, user: user3, plant_information: PlantInformation.find_by(name: "Tulipe"), age_in_days: 484)
-file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZUmlRVZXM8v-YJ1ouVdY3-80F1I0-velaVQ&usqp=CAU')
+plant6 = Plant.create!(nickname: "Bulbizarre", like_number: 0, user: user2, plant_information: PlantInformation.find_by(name: "Monstera"), age_in_days: 69)
+file = URI.open('https://johnlewis.scene7.com/is/image/JohnLewis/238036070alt2?$rsp-pdp-port-1440$')
 plant6.photo.attach(io: file, filename: 'plant6.jpg', content_type: 'image/jpeg')
 
-plant7 = Plant.create!(nickname: "Bulbizarre", like_number: 0, user: user3, plant_information: PlantInformation.find_by(name: "Monstera"), age_in_days: 69)
-file = URI.open('https://cdn.shopify.com/s/files/1/0013/3529/6118/products/gallery_secondary_monstera-deliciosa-6.jpg?v=1588504371')
+plant7 = Plant.create!(nickname: "Salamèche", like_number: 0, user: user3, plant_information: PlantInformation.find_by(name: "Tulipe"), age_in_days: 484)
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZUmlRVZXM8v-YJ1ouVdY3-80F1I0-velaVQ&usqp=CAU')
 plant7.photo.attach(io: file, filename: 'plant7.jpg', content_type: 'image/jpeg')
 
-plant8 = Plant.create!(nickname: "Carapuce", like_number: 0, user: user3, plant_information: PlantInformation.find_by(name: "Strawberry"), age_in_days: 1997)
-file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgnSjEgw2aC8WuV5ugKXnDBN-SA7QzXcrRVg&usqp=CAU')
+plant8 = Plant.create!(nickname: "Bulbizarre", like_number: 0, user: user3, plant_information: PlantInformation.find_by(name: "Monstera"), age_in_days: 69)
+file = URI.open('https://cdn.shopify.com/s/files/1/0013/3529/6118/products/gallery_secondary_monstera-deliciosa-6.jpg?v=1588504371')
 plant8.photo.attach(io: file, filename: 'plant8.jpg', content_type: 'image/jpeg')
+
+plant9 = Plant.create!(nickname: "Carapuce", like_number: 0, user: user3, plant_information: PlantInformation.find_by(name: "Strawberry"), age_in_days: 1997)
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgnSjEgw2aC8WuV5ugKXnDBN-SA7QzXcrRVg&usqp=CAU')
+plant9.photo.attach(io: file, filename: 'plant9.jpg', content_type: 'image/jpeg')
 
 puts "assignation terminé"
 
