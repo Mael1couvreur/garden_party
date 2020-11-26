@@ -1,12 +1,55 @@
 .tache-block {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  // border: solid 1px black;
+  // box-shadow: 0px 0px 2px rgba(0,0,0,0.2);
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: #e1fcde;
+
+}
+
+.tache-block-left {
+  display:flex;
+}
+
+.tache-block-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .nickname-sober {
+    font-size: 0.8em;
+    font-style: italic;
+  }
 }
 
 .hide-task {
   display: none;
 }
 
-// .date-task {
+.plant-photo-to-do {
+  border-radius: 10px;
+}
 
-// }
+.plants-tasks-block {
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.date-task {
+  font-weight: bold;
+}
+
+.date-block {
+  margin-bottom: 10px;
+}
+
+.btn-task {
+  border-radius: 10px;
+  // border: solid 1px grey;
+  border: none;
+  background-color:  white;
+  width: 57px;
+}
