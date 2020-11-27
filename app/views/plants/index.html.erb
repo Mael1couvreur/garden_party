@@ -2,7 +2,7 @@
         <h1 id="index-plant-title">My garden</h1>
         <% @user_plants.each do |user_plant| %>
         <div id ="content-user-plants" class="card-deck flex-row flex-nowrap">
-            <a href="http://google.com">
+            <a href="/plants/<%= user_plant.id %>">
             <div class="img-info-user-plant">
                 <%= cl_image_tag user_plant.photo.key, crop: :fill, id:"photo-user-plant" %>
                     <div class="info-user-plant">
@@ -22,7 +22,8 @@
                         </div>
                     </div>
             </div>
-            <%# <%= image_tag("test-jardiniere-copie.png", id: "jardiniere-user-plant") %> 
+            </a>
+            <%# <%= image_tag("test-jardiniere-copie.png", id: "jardiniere-user-plant") %>
         <% end %>
     </div>
 </div>
