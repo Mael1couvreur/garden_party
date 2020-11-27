@@ -1,1 +1,47 @@
 // Specific CSS for your home-page
+
+.home-page {
+    width: 375px;
+    height: 812px;
+    background: linear-gradient(#08681e, #95c99f);
+}
+
+.title-home {
+    color: white;
+    text-align: center;
+    opacity: 0.7;
+    font-size: 54px;
+}
+
+#btn-go-index-plant {
+    border: 1px solid white;
+    padding: 15px 78px;
+    border-radius: 15px;
+    margin-top: 341px;
+    margin-left: 39px;
+    background-color: white;
+    font-size: 18px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+        &:hover {
+            background-color: grey;
+            border: 2px solid white;
+            font-weight: bold;
+        }
+}
+
+#btn-go-index-plant > a {
+    color: grey;
+    font-weight: bold;
+    text-decoration: none;
+}
+ 
+#first-word-title{
+    // margin-top: 50px;
+}
+
+#icone-home {
+    margin-left: 249px;
+    font-size: 45px;
+    opacity: 0.7;
+}

@@ -1,5 +1,4 @@
 <% if false %>
-  <h2>Hello <%= current_user.first_name %>, tu as du boulot :</h2>
 
   <% @plants.each do |plant| %>
     <h4> <%= plant.nickname %> </h4>
@@ -24,6 +23,7 @@
   <%# end %>
 <%# end %>
 
+<% if false %>
 <div class="container">
   <% counter = 0 %>
   <% while counter < 4 do %>
@@ -47,6 +47,44 @@
         <% end %>
       <% end %>
       <hr>
+    </div>
+    <% counter += 1 %>
+  <% end %>
+</div>
+<% end %>
+
+
+<div class="container">
+  <h2 class="d-flex justify-content-center">To-do list</h2>
+  <hr>
+  <% counter = 0 %>
+  <% while counter < 4 do %>
+    <div class="date-bloc">
+      <% dayDate = DateTime.now + counter.day%>
+      <h4 class="date-task"> <%= dayDate.strftime("%A %-d") %> </h4>
+      <% @plants.each do |plant| %>
+        <div class="plants-tasks-block">
+          <% plant.tasks.each do |task| %>
+            <% plant_real_age = plant.age_in_days + counter %>
+            <% if ((plant_real_age - task.intervalle) % task.intervalle == 0) %>
+              <div class="tache-block">
+                <div class="tache-block-left">
+                  <%= cl_image_tag plant.photo.key, class: "plant-photo-to-do mr-3", width: "70px", height: "70px"%>
+                  <div class="tache-block-middle">
+                    <span class="task-name-to-do"><%= task.name %></span>
+                    <span class="nickname-sober"><%= plant.nickname %></span>
+                  </div>
+                </div>
+                <%= simple_form_for @activity, remote: true do |f| %>
+                  <% f.input :plant_id, as: :hidden, input_html: { value: plant.id } %>
+                  <% f.input :task_id, as: :hidden, input_html: { value: task.id } %>
+                  <%= f.submit "Fait!", class: 'btn-task mr-2' %>
+                <% end %>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+      <% end %>
     </div>
     <% counter += 1 %>
   <% end %>
