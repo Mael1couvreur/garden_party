@@ -3,7 +3,7 @@
   background: linear-gradient(#418530, #0E550C);
   width: 375px;
   height: 80px;
-  position: sticky;
+  position: fixed;
   bottom: 0;
   z-index: 999;
 }
@@ -27,8 +27,10 @@
 }
 
 .block-active {
+  background-color: rgb(72, 138, 62);
   a {
     background-color: #26551D;
+    // box-shadow:
     border-radius: 50%;
   }
 }

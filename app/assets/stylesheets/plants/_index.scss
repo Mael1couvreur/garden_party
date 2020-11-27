@@ -1,8 +1,8 @@
-.container-plants-card {
+.container-plants-cards {
   display: flex;
   width: 375px;
   flex-wrap: wrap;
-  margin: 0 20px;
+  padding: 0 12px;
 }
 
 
@@ -44,8 +44,7 @@
 .img-info-user-plant {
     border-radius: 15px;
     box-shadow: 0 0 6px rgba(0,0,0,0.1);
-    margin-right: 15px;
-    margin-top: 10px;
+    margin: 7px 7px;
     &:hover {
         font-weight: bold;
         box-shadow: 5px 5px 16px rgba(0,0,0,0.3);
