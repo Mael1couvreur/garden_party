@@ -6,6 +6,7 @@
   position: sticky;
   bottom: 0;
   z-index: 999;
+  justify-content: space-around;
 }
 
 .navbar-icon-block {
@@ -23,8 +24,10 @@
 }
 
 .block-active {
+  background-color: rgb(72, 138, 62);
   a {
     background-color: #26551D;
+    // box-shadow:
     border-radius: 50%;
   }
 }
