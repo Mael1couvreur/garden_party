@@ -1,8 +1,6 @@
-<div class="container">
-
-  <h1 id="index-plant-title">My garden</h1>
+<h1 id="index-plant-title">My garden</h1>
+<div class="container-plants-cards">
   <% @user_plants.each do |user_plant| %>
-
     <div id ="content-user-plants" class="card-deck flex-row flex-nowrap">
       <a href="/plants/<%= user_plant.id %>">
       <div class="img-info-user-plant">
