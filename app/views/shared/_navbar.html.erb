@@ -1,4 +1,4 @@
-<div class="navbar-garden">
+<div class="navbar-garden <%= "navbar-garden-home" if action_name == "home" %> ">
 
   <div class="navbar-icon-block <%#= "block-active" if action_name == "index"%> ">
     <%= link_to tasks_path do %>
