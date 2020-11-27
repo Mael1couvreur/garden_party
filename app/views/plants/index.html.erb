@@ -1,29 +1,30 @@
 <div class="container">
-        <h1 id="index-plant-title">My garden</h1>
-        <% @user_plants.each do |user_plant| %>
-        <div id ="content-user-plants" class="card-deck flex-row flex-nowrap">
-            <a href="/plants/<%= user_plant.id %>">
-            <div class="img-info-user-plant">
-                <%= cl_image_tag user_plant.photo.key, crop: :fill, id:"photo-user-plant" %>
-                    <div class="info-user-plant">
-                        <li id="nickname-list-user-plant"><%= user_plant.nickname %></li>
-                        <%creation_date = user_plant.created_at %>
-                        <% calcul_date = @now - creation_date  %>
-                        <% age_plant = calcul_date / 86400 %>
-                        <div class="plant-age">
-                            <li><% age_plant_final = age_plant.to_i %>
-                            <% if age_plant_final == 0 %>
-                                Nouvelle pousse
-                            <% elsif age_plant_final > 1 %>
-                                <%= age_plant_final %> jours
-                            <% else %>
-                                <%= age_plant_final %> jour
-                            <% end %></li>
-                        </div>
-                    </div>
-            </div>
-            </a>
-            <%# <%= image_tag("test-jardiniere-copie.png", id: "jardiniere-user-plant") %>
-        <% end %>
-    </div>
+
+    <h1 id="index-plant-title">My garden</h1>
+    <% @user_plants.each do |user_plant| %>
+
+      <div id ="content-user-plants" class="card-deck flex-row flex-nowrap">
+        <a href="/plants/<%= user_plant.id %>">
+        <div class="img-info-user-plant">
+          <%= cl_image_tag user_plant.photo.key, crop: :fill, id:"photo-user-plant" %>
+          <div class="info-user-plant">
+            <li id="nickname-list-user-plant"><%= user_plant.nickname %></li>
+              <%creation_date = user_plant.created_at %>
+              <% calcul_date = @now - creation_date  %>
+              <% age_plant = calcul_date / 86400 %>
+              <div class="plant-age">
+                  <li><% age_plant_final = age_plant.to_i %>
+                  <% if age_plant_final == 0 %>
+                      Nouvelle pousse
+                  <% elsif age_plant_final > 1 %>
+                      <%= age_plant_final %> jours
+                  <% else %>
+                      <%= age_plant_final %> jour
+                  <% end %></li>
+              </div>
+          </div>
+        </div>
+        </a>
+      </div>
+    <% end %>
 </div>
