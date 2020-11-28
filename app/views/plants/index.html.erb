@@ -1,4 +1,10 @@
-<h1 id="index-plant-title">My garden</h1>
+<div class="top-page-header">
+  <%= link_to new_plant_path do %>
+    <i class="fas fa-plus bouton-add-a-plant"></i>
+  <% end %>
+  <h1 id="index-plant-title">My garden</h1>
+  <%= cl_image_tag current_user.photo.key, class: "avatar-bordered" %>
+</div>
 <div class="container-plants-cards">
   <% @user_plants.each do |user_plant| %>
     <div id ="content-user-plants" class="card-deck flex-row flex-nowrap">

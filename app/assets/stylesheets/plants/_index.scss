@@ -5,6 +5,22 @@
   padding: 0 12px;
 }
 
+.top-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  background: linear-gradient(#418530, rgb(72, 138, 62));
+}
+
+.bouton-add-a-plant {
+  color: white;
+  background-color: rgb(72, 138, 62);
+  box-shadow: 0 0 2px black;
+  padding: 10px;
+  border-radius: 50%;
+}
+
 
 #content-user-plants {
     display: flex;
@@ -26,6 +42,7 @@
 #index-plant-title {
     margin-top: 15px;
     text-align: center;
+    color: white;
 }
 
 #nickname-list-user-plant{
