@@ -6,7 +6,7 @@
     <% end %>
   </div>
 
-  <div class="navbar-icon-block <%= "block-active" if action_name == "index" && controller_name == "plants" %>">
+  <div class="navbar-icon-block <%= "block-active" if (action_name == "index" || action_name == "show") && controller_name == "plants" %>">
     <%= link_to plants_path do %>
       <i class="fas fa-seedling fa-2x navbar-icon"></i>
     <% end %>
