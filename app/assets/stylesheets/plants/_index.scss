@@ -1,4 +1,5 @@
 .container-plants-cards {
+  margin-top: 8px;
   display: flex;
   width: 375px;
   flex-wrap: wrap;
@@ -11,15 +12,25 @@
   align-items: center;
   padding: 0 10px;
   background: linear-gradient(#418530, rgb(72, 138, 62));
+  padding: 4px 8px;
+  h1 {
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    margin: 0px 0px 0px 118px;
+  }
 }
 
 .bouton-add-a-plant {
-  color: white;
   background-color: rgb(72, 138, 62);
-  box-shadow: 0 0 2px black;
-  padding: 10px;
+  padding: 20px;
   border-radius: 50%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  .icon-add-a-plant {
+    color: white;
+  }
 }
+
 
 
 #content-user-plants {
@@ -37,12 +48,6 @@
     &:hover {
         font-weight: bold;
     }
-}
-
-#index-plant-title {
-    margin-top: 15px;
-    text-align: center;
-    color: white;
 }
 
 #nickname-list-user-plant{
