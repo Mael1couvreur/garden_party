@@ -1,5 +1,6 @@
 class ActivitiesController < ApplicationController
   def create
+    raise
     activity = Activity.new(activity_params)
     plant = Plant.find(params[:activity]["plant_id"])
     task = Task.find(params[:activity]["task_id"])

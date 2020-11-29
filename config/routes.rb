@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  resources :tasks, only: [:index]
-  resources :activities, only: [:create]
+  resources :tasks, only: [:index, :edit, :update]
+  resources :activities, only: [:create, :edit]
   resources :plants
 end
