@@ -1,0 +1,10 @@
+<%= simple_form_for @activity do |f| %>
+  <% f.input :plant_id, as: :hidden, input_html: { value: plant.id } %>
+  <% f.input :task_id, as: :hidden, input_html: { value: task.id } %>
+  <% f.object.plant_id = plant.id %>
+  <% f.object.task_id = task.id %>
+  <%# <% f.hidden_field :plant_id, value: plant.id %>
+  <%# <%= f.hidden_field :task_id, value: task.id %>
+  <%# <%= raise %>
+  <%= f.submit "Fait!", class: 'btn-task mr-2' %>
+<% end %>
