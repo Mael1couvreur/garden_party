@@ -25,6 +25,17 @@
   }
 }
 
+.collapse-date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+
+  h4 {
+    margin: 0 0 0 5px;
+  }
+}
+
 .task-name-to-do{
   font-weight: bold;
 }
@@ -49,6 +60,7 @@
 
 .date-block {
   margin-bottom: 10px;
+
 }
 
 .btn-task {
