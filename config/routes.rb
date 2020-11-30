@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     resources :plants do
       member do
         patch 'upvote'
+        patch 'dislike'
       end
     end
 
