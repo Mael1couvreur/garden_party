@@ -21,7 +21,17 @@
   justify-content: space-between;
   .nickname-sober {
     font-size: 0.8em;
-    font-style: italic;
+    color: grey
+  }
+}
+
+.tache-block-right {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  p {
+    padding-right: 8px;
+    font-size: 0.8em;
   }
 }
 
@@ -36,9 +46,6 @@
   }
 }
 
-.task-name-to-do{
-  font-weight: bold;
-}
 
 .hide-task {
   display: none;
@@ -60,7 +67,7 @@
 
 .date-block {
   margin-bottom: 10px;
-
+  border: 1px solid grey;
 }
 
 .btn-task {
@@ -79,10 +86,9 @@
 
 #create-activity {
   margin-top: 0px;
-  margin-left: 16px;
 }
 
-#display-points {
+.display-points {
   margin-top: 0;
   margin-bottom: 0px;
   width: 95px;

@@ -8,11 +8,11 @@
   <% while counter < 4 do %>
     <div class="date-bloc">
       <% dayDate = DateTime.now + counter.day%>
-      <div class="collapse-date" data-toggle="collapse" href="#collapseExample<%= counter %>" role="button" aria-expanded="false" aria-controls="collapseExample">
+      <div class="collapse-date" data-toggle="collapse" href="#collapseExample<%= counter %>" role="button" <%="aria-expanded=true" if counter == 0%> <%="aria-expanded=false" if counter != 0%> aria-controls="collapseExample">
         <h4 class="date-task"> <%= dayDate.strftime("%A %-d") %> </h4>
         <i class="fas fa-caret-down"></i>
       </div>
-      <div class="tasks-date-block collapse" id="collapseExample<%= counter %>">
+      <div class="tasks-date-block collapse <%="show" if counter == 0%>" id="collapseExample<%= counter %>">
         <% @plants.each do |plant| %>
           <div class="plants-tasks-block">
             <% plant.tasks.each do |task| %>
@@ -26,12 +26,14 @@
                       <span class="nickname-sober"><%= plant.nickname %></span>
                     </div>
                   </div>
-                  <%= simple_form_for @activity do |f| %>
-                    <%= f.input :plant_id, as: :hidden, input_html: { value: plant.id } %>
-                    <%= f.input :task_id, as: :hidden, input_html: { value: task.id } %>
-                    <p id='display-points'>+ <%= task.score %> points</p>
-                    <%= f.submit "Fait", class: 'btn-task mr-2', id: 'create-activity' %>
-                  <% end %>
+                  <div class="tache-block-right">
+                    <p>+ <%= task.score %></p>
+                    <%= simple_form_for @activity do |f| %>
+                      <%= f.input :plant_id, as: :hidden, input_html: { value: plant.id } %>
+                      <%= f.input :task_id, as: :hidden, input_html: { value: task.id } %>
+                      <%= f.submit "Fait", class: 'btn-task mr-2', id: 'create-activity' %>
+                    <% end %>
+                  </div>
                 </div>
               <% end %>
             <% end %>
