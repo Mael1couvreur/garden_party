@@ -28,6 +28,7 @@ require("channels")
 import "bootstrap";
 
 import "bootstrap";
+import "initChatroomCable";
 
 
 
@@ -35,6 +36,7 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
+  initChatroomCable();
   document.querySelectorAll(".btn-task").forEach((btn) => {
     btn.addEventListener("click", (event) => {
       event.currentTarget.parentNode.parentNode.classList.toggle("hide-task");
