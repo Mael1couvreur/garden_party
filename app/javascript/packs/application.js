@@ -9,6 +9,8 @@ require("@rails/activestorage").start()
 require("channels")
 
 
+
+
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
 // or the `imagePath` JavaScript helper below.
@@ -25,10 +27,16 @@ require("channels")
 // External imports
 import "bootstrap";
 
+import "bootstrap";
+import "initChatroomCable";
+
+
+
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
+  initChatroomCable();
   document.querySelectorAll(".btn-task").forEach((btn) => {
     btn.addEventListener("click", (event) => {
       event.currentTarget.parentNode.parentNode.classList.toggle("hide-task");
