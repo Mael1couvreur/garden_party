@@ -5,8 +5,13 @@ Rails.application.routes.draw do
 
   resources :tasks, only: [:index]
   resources :activities, only: [:create]
-  resources :plants
   resources :chatrooms, only: [:show, :index] do
     resources :messages, only: :create
+  end
+
+  scope module: :garden do
+    resources :plants
+    get '/communities', to: 'communities#index'
+    get '/communities/classement', to: 'communities#classement'
   end
 end

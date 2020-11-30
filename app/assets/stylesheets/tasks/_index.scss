@@ -25,6 +25,17 @@
   }
 }
 
+.collapse-date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+
+  h4 {
+    margin: 0 0 0 5px;
+  }
+}
+
 .task-name-to-do{
   font-weight: bold;
 }
@@ -49,6 +60,7 @@
 
 .date-block {
   margin-bottom: 10px;
+
 }
 
 .btn-task {
@@ -59,4 +71,19 @@
   color: white;
   width: 57px;
   margin-top: 27px;
+}
+
+.hidden {
+  margin-bottom: 0px;
+}
+
+#create-activity {
+  margin-top: 0px;
+  margin-left: 16px;
+}
+
+#display-points {
+  margin-top: 0;
+  margin-bottom: 0px;
+  width: 95px;
 }
