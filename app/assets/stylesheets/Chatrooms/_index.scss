@@ -1,0 +1,47 @@
+.infos-user-chat{
+}
+
+.name-hour-chat{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.user-chat{
+    margin-top: 30px;
+    display: flex;
+}
+
+a{
+    color: black;
+    &:hover{
+        color: black;
+        text-decoration: none;
+    }
+}
+
+.user-photo-chat{
+    width: 85px;
+    border-radius: 50%;
+    // border: white 1px solid;
+    margin-right: 20px;
+}
+
+.top-page-header > #chat-title{
+    text-align: center;
+}
+
+#chat-name{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#chat-title{
+    color: white;
+}
+
+input{
+    position: fixed;
+    bottom: 80px;
+}

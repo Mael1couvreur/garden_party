@@ -5,6 +5,7 @@ class ChatroomsController < ApplicationController
     end
     
     def show
+        # @chatrooms = Chatroom.all
         @chatroom = Chatroom.find(params[:id])
         @message = Message.new chatroom: @chatroom
         @messages = @chatroom.messages.includes(:user)

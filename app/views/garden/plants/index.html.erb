@@ -6,7 +6,7 @@
 <div class="container-plants-cards">
   <% @user_plants.each do |user_plant| %>
     <div id ="content-user-plants" class="card-deck flex-row flex-nowrap">
-      <a href="/plants/<%= user_plant.id %>">
+      <a href="/chatrooms/<%= user_plant.id %>">
       <div class="img-info-user-plant">
         <%= cl_image_tag user_plant.photo.key, crop: :fill, id:"photo-user-plant" %>
         <div class="info-user-plant">
