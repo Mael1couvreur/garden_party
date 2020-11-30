@@ -1,0 +1,40 @@
+<div class="top-page-header">
+  <h1>My garden</h1>
+  <%= cl_image_tag current_user.photo.key, class: "avatar-bordered avatar-top-right" %>
+</div>
+
+<div class="container-plants-cards">
+  <% @user_plants.each do |user_plant| %>
+    <div id ="content-user-plants" class="card-deck flex-row flex-nowrap">
+      <a href="/plants/<%= user_plant.id %>">
+      <div class="img-info-user-plant">
+        <%= cl_image_tag user_plant.photo.key, crop: :fill, id:"photo-user-plant" %>
+        <div class="info-user-plant">
+          <li id="nickname-list-user-plant"><%= user_plant.nickname %></li>
+          <%creation_date = user_plant.created_at %>
+          <% calcul_date = @now - creation_date  %>
+          <% age_plant = calcul_date / 86400 %>
+          <div class="plant-age">
+            <% age_plant_final = user_plant.age_in_days.to_i %>
+            <% if age_plant_final == 0 %>
+                Nouvelle pousse
+            <% elsif age_plant_final > 1 %>
+                <%= age_plant_final %> jours
+            <% else %>
+                <%= age_plant_final %> jour
+            <% end %>
+          </div>
+        </div>
+      </div>
+      </a>
+    </div>
+  <% end %>
+  <%= link_to new_plant_path do %>
+    <div class="bouton-add-a-plant floating-bouton">
+      <i class="fas fa-plus icon-add-a-plant"></i>
+    </div>
+  <% end %>
+</div>
+
+
+ <%# <%= image_tag("test-jardiniere-copie.png", id: "jardiniere-user-plant") %>

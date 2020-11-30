@@ -1,19 +1,19 @@
 <div class="navbar-garden <%= "navbar-garden-home" if action_name == "home" %> ">
 
-  <div class="navbar-icon-block <%#= "block-active" if action_name == "index"%> ">
+  <div class="navbar-icon-block <%= "block-active" if action_name == "index" && controller_name == "tasks" %> ">
     <%= link_to tasks_path do %>
       <i class="far fa-calendar-alt fa-2x navbar-icon"></i>
     <% end %>
   </div>
 
-  <div class="navbar-icon-block">
+  <div class="navbar-icon-block <%= "block-active" if (action_name == "index" || action_name == "show") && controller_name == "plants" %>">
     <%= link_to plants_path do %>
       <i class="fas fa-seedling fa-2x navbar-icon"></i>
     <% end %>
   </div>
 
-  <div class="navbar-icon-block">
-    <%= link_to plants_path do %>
+  <div class="navbar-icon-block <%= "block-active" if (action_name == "index" || action_name == "show") && controller_name == "communities" %>">
+    <%= link_to communities_path do %>
       <i class="fas fa-users fa-2x navbar-icon"></i>
     <% end %>
   </div>

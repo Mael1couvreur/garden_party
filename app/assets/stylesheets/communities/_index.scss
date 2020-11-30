@@ -1,0 +1,27 @@
+.link-to-classement {
+  font-size: 1.8em;
+  color: white;
+}
+
+
+.top-page-header-community {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  background: linear-gradient(#418530, rgb(72, 138, 62));
+  padding: 4px 8px;
+  h1 {
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+}
+
+.community-avatar {
+  height: 45px;
+  position: absolute;
+  top: 0px;
+  left: 10px;
+}

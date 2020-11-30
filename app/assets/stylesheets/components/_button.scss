@@ -1,0 +1,14 @@
+.bouton-standard {
+  background-color: white;
+  padding: 8px;
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+}
+
+.floating-bouton {
+  position: fixed;
+  bottom: 105px;
+  right: 23px;
+  z-index: 999;
+}

@@ -1,3 +1,18 @@
+.top-new-plant {
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+  #title-form-new-plant {
+    margin-left: 60px;
+  }
+}
+
+.bouton-back {
+  font-size: 3em;
+  color: rgb(72, 138, 62);
+  opacity: 0.6;
+}
+
 .champ-form {
     border: 0px;
     border-bottom: 1px solid green;
@@ -57,10 +72,4 @@ color: black
         font-weight: bold;
         box-shadow: 5px 5px 16px rgba(0,0,0,0.3);
     }
-}
-
-#title-form-new-plant {
-    text-align: center;
-    margin: 25px;
-    margin-bottom: 50px;
 }
