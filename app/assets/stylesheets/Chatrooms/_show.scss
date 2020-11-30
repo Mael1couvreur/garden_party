@@ -9,7 +9,27 @@
     margin-left: 15px;
 }
 
+.color_green_background{
+    background-color: green;
+}
+
 #title-chat {
     margin: 0px 0px 0px 45px
+}
+
+#chat-date{
+    font-size: 12px;
+    margin-bottom: 0px;
+    // position: ;
+    // right: 35px;
+}
+
+#chat-message{
+    margin-bottom: 2rem;
+}
+
+#user-name{
+    font-weight: bold;
+    margin-bottom: 0px;
 }
 
