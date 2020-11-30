@@ -26,29 +26,14 @@
                       <span class="nickname-sober"><%= plant.nickname %></span>
                     </div>
                   </div>
-                  <%= simple_form_for @activity, remote: true do |f| %>
-                    <% f.input :plant_id, as: :hidden, input_html: { value: plant.id } %>
-                    <% f.input :task_id, as: :hidden, input_html: { value: task.id } %>
-                    <%= f.submit "Fait!", class: 'btn-task mr-2' %>
+                  <%= simple_form_for @activity do |f| %>
+                    <%= f.input :plant_id, as: :hidden, input_html: { value: plant.id } %>
+                    <%= f.input :task_id, as: :hidden, input_html: { value: task.id } %>
+                    <p id='display-points'>+ <%= task.score %> points</p>
+                    <%= f.submit "Fait", class: 'btn-task mr-2', id: 'create-activity' %>
                   <% end %>
                 </div>
-<<<<<<< HEAD
-
-                <%# <%= render "activities/new_action_form" %>
-                <%= simple_form_for @activity do |f| %>
-                  <% f.input :plant_id, as: :hidden, input_html: { value: plant.id } %>
-                  <% f.input :task_id, as: :hidden, input_html: { value: task.id } %>
-                  <% f.object.plant_id = plant.id %>
-                  <% f.object.task_id = task.id %>
-                  <%# <% f.hidden_field :plant_id, value: plant.id %>
-                  <%# <%= f.hidden_field :task_id, value: task.id %>
-                  <%# <%= raise %>
-                  <%= f.button :submit, class: 'btn-task mr-2' %>
-                <% end %>
-              </div>
-=======
               <% end %>
->>>>>>> 20ad41d84fe3be2f585832360242b66142d0205d
             <% end %>
           </div>
         <% end %>
