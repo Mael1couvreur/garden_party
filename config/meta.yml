@@ -1,0 +1,6 @@
+# config/meta.yml
+
+meta_product_name: "Garden Party"
+meta_title: "Garden Party - Le jardinage pour tous"
+meta_description: "Débutant ou expérimenté Garden Party est l'application de jardinage pour tous"
+# meta_image: "cover.png" # should exist in `app/assets/images/`

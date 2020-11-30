@@ -1,3 +1,7 @@
+<% content_for :meta_title, "Mes plantes" %>
+<% content_for :meta_description, "Liste des plantes" %>
+<%# <% content_for :meta_image, cl_image_path(@garden.photo.path) %> 
+
 <div class="top-page-header">
   <h1>My garden</h1>
   <%= cl_image_tag current_user.photo.key, class: "avatar-bordered avatar-top-right" %>
@@ -6,7 +10,7 @@
 <div class="container-plants-cards">
   <% @user_plants.each do |user_plant| %>
     <div id ="content-user-plants" class="card-deck flex-row flex-nowrap">
-      <a href="/chatrooms/<%= user_plant.id %>">
+      <a href="/plants/<%= user_plant.id %>">
       <div class="img-info-user-plant">
         <%= cl_image_tag user_plant.photo.key, crop: :fill, id:"photo-user-plant" %>
         <div class="info-user-plant">
