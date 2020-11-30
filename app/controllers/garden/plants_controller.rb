@@ -28,6 +28,15 @@ module Garden
       end
     end
 
+    def upvote
+      @plant = Plant.find(params[:id])
+      @plant.like_number += 1
+      @plant.save!
+      @plant.user.score += 1
+      @plant.user.save!
+      # redirect_to communities_path
+    end
+
     private
 
     def plants_params
