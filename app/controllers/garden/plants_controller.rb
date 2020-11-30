@@ -37,6 +37,14 @@ module Garden
       # redirect_to communities_path
     end
 
+    def dislike
+      @plant = Plant.find(params[:id])
+      @plant.like_number -= 1
+      @plant.save!
+      @plant.user.score -= 1
+      @plant.user.save!
+    end
+
     private
 
     def plants_params
