@@ -10,7 +10,13 @@ Rails.application.routes.draw do
   end
 
   scope module: :garden do
-    resources :plants
+    resources :plants do
+      member do
+        patch 'upvote'
+        patch 'dislike'
+      end
+    end
+
     get '/communities', to: 'communities#index'
     get '/communities/classement', to: 'communities#classement'
   end

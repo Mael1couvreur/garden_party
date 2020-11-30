@@ -1,0 +1,21 @@
+<h1 id="header">Classement général</h1>
+
+<div class="container-ranking">
+  <div class="ranking">
+    <p class="headers">Rang</p>
+    <p class="headers">Gardeneur</p>
+    <p class="headers">Score</p>
+  </div>
+
+  <%# Affiche les scores  %>
+  <%# @order vient du controller. Array contennant des instances de user dans l'order asc des scores %>
+  <% @order.each do |position| %>
+    <% user = User.find(position.id) %>
+  <div class="ranking">
+    <p id="position"><%= @order.index(user) + 1 %></p>
+    <p id="name"> <%= user.first_name %></p>
+    <p id="score"><%= user.score %> points</p>
+  </div>
+  <% end %>
+
+</div>

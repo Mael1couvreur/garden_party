@@ -26,9 +26,10 @@ require("channels")
 
 // External imports
 import "bootstrap";
-
-import "bootstrap";
-import "initChatroomCable";
+import { initChatroomCable } from "../channels/chatroom_channel";
+import { upvote } from "../plugins/upvote";
+import { hideTask } from "../plugins/hideTask";
+import { dislike } from "../plugins/dislike";
 
 
 
@@ -37,9 +38,7 @@ import "initChatroomCable";
 
 document.addEventListener('turbolinks:load', () => {
   initChatroomCable();
-  document.querySelectorAll(".btn-task").forEach((btn) => {
-    btn.addEventListener("click", (event) => {
-      event.currentTarget.parentNode.parentNode.classList.toggle("hide-task");
-    });
-  });
+  upvote();
+  dislike();
+  hideTask();
 });
