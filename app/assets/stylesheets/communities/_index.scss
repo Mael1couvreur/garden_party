@@ -1,3 +1,41 @@
+.container-plants-cards-community {
+  margin-top: 8px;
+  width: 375px;
+  padding: 0 12px;
+}
+
+.info-user-plant-community {
+    font-weight: 100;
+    list-style-type: none;
+    text-decoration: none;
+    margin-top: 4px;
+}
+
+.like-counter {
+  position: absolute;
+  bottom: 6px;
+  right: 10px;
+}
+
+.card-right-side {
+  margin-left: 8px;
+}
+
+#content-user-plants-community {
+  display: flex;
+  border-radius: 15px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  margin: 16px 8px;
+  padding: 8px;
+  position: relative;
+}
+
+#photo-user-plant-community {
+    width: 130px;
+    height: 130px;
+    border-radius: 20px;
+}
+
 .link-to-classement {
   font-size: 1.8em;
   color: white;
@@ -20,8 +58,10 @@
 }
 
 .community-avatar {
-  height: 45px;
-  position: absolute;
-  top: 0px;
-  left: 10px;
+  height: 40px;
+}
+
+.hide-link-decoration {
+  text-decoration: none;
+  color: black !important;
 }
