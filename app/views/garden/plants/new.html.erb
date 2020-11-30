@@ -17,7 +17,7 @@
           </label>
           <div class="infos-form-plant-new">
               <%= f.input :nickname, label: false, placeholder: "Surnom", input_html: { class: 'champ-form' } %>
-              <%= f.input :plant_information, label: false, placeholder: "Catégorie", input_html: { class: 'champ-form' }  %>
+              <%= f.input :plant_information, collection: @plant_infos , prompt: "Select you type of plant" %>
           </div>
           <%= f.submit "Créer ma plante", id:"btn-form-new-plant" %>
       <% end %>

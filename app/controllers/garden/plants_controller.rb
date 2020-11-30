@@ -6,21 +6,24 @@ module Garden
     end
 
     def index
-
-      @user_plants = Plant.where(user_id:current_user.id)
+      @user_plants = Plant.where(user_id: current_user.id)
       # @creation_date = @user_plant[].created_at.strftime("%d %b. %Y")
       @now = Time.now
-
     end
 
     def new
       @plant = Plant.new
+      @plant_infos = []
+      PlantInformation.all.select(:name).each do |_plantinfo|
+        @plant_infos << _plantinfo.name
+      end
     end
 
     def create
       @plant = Plant.new(plants_params)
       @plant.user = current_user
-      @plant.plant_information = PlantInformation.find(params[:plant]["plant_information"])
+      @plant_information = PlantInformation.find_or_create_by(name: params["plant"]["plant_information"])
+      @plant.plant_information = @plant_information
       if @plant.save
         redirect_to plants_path
       else
