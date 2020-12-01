@@ -10,7 +10,10 @@ class ActivitiesController < ApplicationController
 
     current_user.score += task.score
     current_user.save!
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2f8227bbec4b7b245c956d4da323e18e50dcefad
     # redirect_to tasks_path
   end
 
