@@ -1,7 +1,12 @@
 class ChatroomsController < ApplicationController
 
     def index 
-        @chatrooms = Chatroom.all
+        messages = Message.where(user_id: current_user)
+        chats = []
+        messages.each do |message|
+           chats << message.chatroom 
+        end
+        @chatrooms = chats.uniq
     end
     
     def show
