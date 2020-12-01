@@ -6,12 +6,12 @@
     <h2 id="chat-title">Mes conversations</h2>
 </div>
 
-<div class="container">
+<div class="container mt-2">
   <% @chatrooms.each do |chatroom| %>
     <% messages = chatroom.messages.where.not(user_id: current_user).select(:user_id).distinct %>
     <% messages.each do |message| %>
-      <div id ="content-user-chat" class="card-deck flex-row flex-nowrap">
-        <%= link_to chatroom_path(chatroom.id) do %>
+      <div class="card-deck flex-row flex-nowrap content-user-chat">
+        <%= link_to chatroom_path(chatroom.id), class:"avatar-click-to-message" do %>
           <div class="user-chat">
             <div class="user-photo-chat">
                 <%= cl_image_tag message.user.photo.key, class:"user-photo-chat" %>
@@ -19,10 +19,11 @@
             <div class="infos-user-chat">
               <div class="name-hour-chat">
                 <h3 id="chat-name"><%= message.user.first_name %></h3>
-                <p><%= chatroom.messages.last.created_at.strftime("%H:%M") %></p>
-              <%# <% raise %>
               </div>
-              <p><%= chatroom.messages.last.content %></p>
+              <div class="last-message">
+                <p><%= chatroom.messages.last.content %></p>
+                <p><%= chatroom.messages.last.created_at.strftime("%H:%M") %></p>
+              </div>
             </div>
           </div>
         <% end %>

@@ -1,12 +1,43 @@
 .chatroom {
-    border-radius: 15px;
-    box-shadow: 0 0 6px rgba(0,0,0,0.1);
     margin: 21px 7px;
+}
 
+.new-message {
+  input{
+      position: fixed;
+      bottom: 100px;
+      width: 90vw;
+      margin: 0 5%;
+  }
+}
+
+.author {
+  display: flex;
+  justify-content: space-between;
+}
+
+.my-message {
+  background-color: #d7f2da;
 }
 
 .message-container {
-    margin-left: 15px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    padding: 8px;
+    margin-bottom: 24px;
+    width: 100%;
+    margin-left: 8px;
+    p {
+      margin: 0;
+    }
+}
+
+#message-content {
+  width: 90vw;
+  margin: 0 5%;
+}
+
+.message-and-picture {
+  display:flex;
 }
 
 .color_green_background{
@@ -22,10 +53,6 @@
     margin-bottom: 0px;
     // position: ;
     // right: 35px;
-}
-
-#chat-message{
-    margin-bottom: 2rem;
 }
 
 #user-name{
