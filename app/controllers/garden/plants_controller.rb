@@ -20,6 +20,7 @@ module Garden
     end
 
     def create
+      raise
       @plant = Plant.new(plants_params)
       @plant.user = current_user
       @plant_information = PlantInformation.find_or_create_by(name: params["plant"]["plant_information"])
