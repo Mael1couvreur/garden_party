@@ -1,32 +1,31 @@
 <% content_for :meta_title, "Messages" %>
 <% content_for :meta_description, "Ecrivez votre message" %>
-<%# <% content_for :meta_image, cl_image_path(@garden.photo.path) %> 
+<%# <% content_for :meta_image, cl_image_path(@garden.photo.path) %>
 
 <div class="top-page-header">
-  <h1 id="title-chat">Discutez avec votre voisin</h1>
+  <h1 id="title-chat">Discutez avec <%= @chatroom.messages.where.not(user_id: current_user).first.user.first_name %></h1>
 </div>
-
 <div class="container">
     <div class="chatroom">
         <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
         <% @chatroom.messages.each do |message| %>
-            <% "class=color_green_background" if message.user_id == current_user %>
-            
-            <div class="message-container" id="message-<%= message.id %>">
-            <i class="author">
-                <span id="user-name"><%= message.user.first_name %></span>
-                <span id="chat-date"><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></span>
-            </i>
-            <p id="chat-message"><%= message.content %></p>
+            <div class="message-and-picture">
+              <%= cl_image_tag message.user.photo.key, class:"avatar-bordered community-avatar" %>
+              <div class="message-container <%="my-message" if message.user_id == current_user.id %>" id="message-<%= message.id %>">
+              <i class="author">
+                  <span id="user-name"><%= message.user.first_name %></span>
+                  <span id="chat-date"><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></span>
+              </i>
+              <p id="chat-message"><%= message.content %></p>
+              </div>
             </div>
         <% end %>
         </div>
     </div>
 </div>
 
-<div class="new_message">
+<div class="new-message">
     <%= simple_form_for [ @chatroom, @message ] do |f| %>
-        <%= f.input :content, label: false, placeholder: "Ecrivez votre message" %>
+        <%= f.input :content, label: false, placeholder: "Ecrivez votre message", class:"my-message-encadre" %>
     <% end %>
 </div>
-     
