@@ -15,6 +15,15 @@ class ChatroomsController < ApplicationController
         @messages = @chatroom.messages.includes(:user)
     end
 
+    def create
+      @chatroom = Chatroom.new(chatrooms_params)
+      if @chatroom.save
+        redirect_to chatrooms_path
+      else
+        render :new
+      end
+    end
+
     def chatroom_params
         params.require(:chatroom).permit(:name)
     end
