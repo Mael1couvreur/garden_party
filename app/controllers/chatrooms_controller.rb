@@ -1,13 +1,27 @@
 class ChatroomsController < ApplicationController
 
     def index 
-        @chatrooms = Chatroom.all
+        messages = Message.where(user_id: current_user)
+        chats = []
+        messages.each do |message|
+           chats << message.chatroom 
+        end
+        @chatrooms = chats.uniq
     end
     
     def show
         @chatroom = Chatroom.find(params[:id])
         @message = Message.new chatroom: @chatroom
         @messages = @chatroom.messages.includes(:user)
+    end
+
+    def create
+      @chatroom = Chatroom.new(chatrooms_params)
+      if @chatroom.save
+        redirect_to chatrooms_path
+      else
+        render :new
+      end
     end
 
     def chatroom_params

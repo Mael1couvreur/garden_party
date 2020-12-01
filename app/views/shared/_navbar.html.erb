@@ -18,8 +18,8 @@
     <% end %>
   </div>
 
-  <div class="navbar-icon-block">
-    <%= link_to plants_path do %>
+  <div class="navbar-icon-block <%= "block-active" if action_name == "index" && controller_name == "chatrooms" %>">
+    <%= link_to chatrooms_path do %>
       <i class="fas fa-comment fa-2x navbar-icon"></i>
     <% end %>
   </div>
