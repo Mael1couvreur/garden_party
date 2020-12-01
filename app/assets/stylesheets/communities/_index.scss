@@ -43,6 +43,11 @@
   color: white;
 }
 
+.user-chat-from-community {
+  position: absolute;
+  margin-left: -8px;
+}
+
 
 .top-page-header-community {
   display: flex;
@@ -66,4 +71,12 @@
 .hide-link-decoration {
   text-decoration: none;
   color: black !important;
+}
+
+.bouton-chat {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: 0;
+  background: none;
 }

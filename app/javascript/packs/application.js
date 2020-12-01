@@ -30,7 +30,7 @@ import { initChatroomCable } from "../channels/chatroom_channel";
 import { upvote } from "../plugins/upvote";
 import { hideTask } from "../plugins/hideTask";
 import { dislike } from "../plugins/dislike";
-
+import { locateChatroom } from "../plugins/locateChatroom";
 
 
 // Internal imports, e.g:
@@ -41,4 +41,5 @@ document.addEventListener('turbolinks:load', () => {
   upvote();
   dislike();
   hideTask();
+  // locateChatroom();
 });
