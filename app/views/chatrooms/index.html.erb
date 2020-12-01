@@ -1,33 +1,32 @@
 <% content_for :meta_title, "Chat" %>
 <% content_for :meta_description, "Discutez avec votre voisins" %>
-<%# <% content_for :meta_image, cl_image_path(@garden.photo.path) %> 
+<%# <% content_for :meta_image, cl_image_path(@garden.photo.path) %>
 
 <div class="top-page-header">
     <h2 id="chat-title">Mes conversations</h2>
 </div>
 
 <div class="container">
-
-    <% @chatrooms.each do |chatroom| %>
-        <% messages = chatroom.messages.where.not(user_id: current_user).select(:user_id).distinct %>
-        <% messages.each do |message| %>
-    <div id ="content-user-chat" class="card-deck flex-row flex-nowrap">
-          <a href="/chatrooms/show">
-            <div class="user-chat">
-                <div class="user-photo-chat">
-                    <%= cl_image_tag message.user.photo.key, class:"user-photo-chat" %>  
-                </div>
-                <div class="infos-user-chat">
-                    <div class="name-hour-chat">
-                        <h3 id="chat-name"><%= message.user.first_name %></h3>
-                        <p><%= chatroom.messages.last.created_at.strftime("%H:%M") %></p>
-                    <%# <% raise %> 
-                    </div>
-                    <p><%= chatroom.messages.last.content %></p>
-                </div>
+  <% @chatrooms.each do |chatroom| %>
+    <% messages = chatroom.messages.where.not(user_id: current_user).select(:user_id).distinct %>
+    <% messages.each do |message| %>
+      <div id ="content-user-chat" class="card-deck flex-row flex-nowrap">
+        <%= link_to chatroom_path(chatroom.id) do %>
+          <div class="user-chat">
+            <div class="user-photo-chat">
+                <%= cl_image_tag message.user.photo.key, class:"user-photo-chat" %>
             </div>
-    </div>
+            <div class="infos-user-chat">
+              <div class="name-hour-chat">
+                <h3 id="chat-name"><%= message.user.first_name %></h3>
+                <p><%= chatroom.messages.last.created_at.strftime("%H:%M") %></p>
+              <%# <% raise %>
+              </div>
+              <p><%= chatroom.messages.last.content %></p>
+            </div>
+          </div>
         <% end %>
+      </div>
     <% end %>
-
+  <% end %>
 </div>

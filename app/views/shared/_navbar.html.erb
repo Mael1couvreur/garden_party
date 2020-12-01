@@ -12,13 +12,13 @@
     <% end %>
   </div>
 
-  <div class="navbar-icon-block <%= "block-active" if (action_name == "index" || action_name == "show") && controller_name == "communities" %>">
+  <div class="navbar-icon-block <%= "block-active" if (action_name == "index" || action_name == "show" || action_name == "classement" ) && controller_name == "communities" %>">
     <%= link_to communities_path do %>
       <i class="fas fa-users fa-2x navbar-icon"></i>
     <% end %>
   </div>
 
-  <div class="navbar-icon-block <%= "block-active" if action_name == "index" && controller_name == "chatrooms" %>">
+  <div class="navbar-icon-block <%= "block-active" if (action_name == "index" || action_name == "show") && controller_name == "chatrooms" %>">
     <%= link_to chatrooms_path do %>
       <i class="fas fa-comment fa-2x navbar-icon"></i>
     <% end %>
