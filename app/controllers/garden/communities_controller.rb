@@ -7,6 +7,10 @@ module Garden
 
     def classement
       @order = User.order(score: :desc)
+<<<<<<< HEAD
+=======
+      @user = current_user
+>>>>>>> 83cf17d440dce0be5194890c65769ef8080ccedb
     end
   end
 end
