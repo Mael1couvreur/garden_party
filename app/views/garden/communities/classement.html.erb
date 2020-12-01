@@ -22,4 +22,17 @@
   </div>
   <% end %>
 
+  <h1 id="header">Ta position</h1>
+    <div class="ranking">
+      <p class="headers">Rang</p>
+      <p class="headers">Gardeneur</p>
+      <p class="headers">Score</p>
+    </div>
+
+    <div class="ranking">
+      <p id="position"><%= @order.index(current_user) + 1 %></p>
+      <p id="name"> <%= @order.find(current_user.id).first_name %></p>
+      <p id="score"><%= @order.find(current_user.id).score %> points</p>
+    </div>
+
 </div>

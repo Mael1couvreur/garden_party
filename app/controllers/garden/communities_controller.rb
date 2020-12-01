@@ -6,7 +6,8 @@ module Garden
     end
 
     def classement
-      @order = User.order(score: :asc)
+      @order = User.order(score: :desc)
+      @user = current_user
     end
   end
 end
