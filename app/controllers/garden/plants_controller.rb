@@ -20,11 +20,15 @@ module Garden
     end
 
     def create
-      raise
+      obtention_date = params[:plant][:age_in_days]
+      obtention_date = obtention_date.split("-")
+      age_in_days = (Date.today - Date.new(obtention_date[0].to_i, obtention_date[1].to_i, obtention_date[2].to_i)).to_i
       @plant = Plant.new(plants_params)
       @plant.user = current_user
       @plant_information = PlantInformation.find_or_create_by(name: params["plant"]["plant_information"])
       @plant.plant_information = @plant_information
+      @plant.age_in_days = age_in_days
+
       if @plant.save
         redirect_to plants_path
       else
@@ -52,7 +56,7 @@ module Garden
     private
 
     def plants_params
-      params.require(:plant).permit(:user_id, :like_number, :nickname, :photo)
+      params.require(:plant).permit(:user_id, :nickname, :photo, :age_in_days)
     end
   end
 end
