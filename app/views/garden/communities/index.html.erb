@@ -1,6 +1,6 @@
 <% content_for :meta_title, "Communauté" %>
 <% content_for :meta_description, "Plantes des voisins" %>
-<%# <% content_for :meta_image, cl_image_path(@garden.photo.path) %> 
+<%# <% content_for :meta_image, cl_image_path(@garden.photo.path) %>
 
 <div class="top-page-header-community">
   <%= link_to communities_classement_path do %>
@@ -18,6 +18,13 @@
         <div class="user-info-community">
           <%= cl_image_tag plant.user.photo.key, class: "avatar-bordered community-avatar" %>
           <%= plant.user.first_name %>
+
+          <%= simple_form_for @chatroom do |f| %>
+            <%= f.input :name, as: :hidden, input_html: { value: "Conversation avec #{plant.user.first_name}" } %>
+            <%= button_tag type: 'submit', class:"bouton-chat" do %>
+              <i class="far fa-comment-dots text-secondary user-chat-from-community"></i>
+            <% end %>
+          <% end %>
         </div>
         <div class="info-user-plant-community">
           <em><%= plant.nickname %></em> - <%= plant.plant_information.family %>
