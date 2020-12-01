@@ -1,7 +1,7 @@
 .navbar-garden {
   display: flex;
   background: linear-gradient(#418530, #0E550C);
-  width: 375px;
+  width: 100vw;
   height: 80px;
   position: fixed;
   bottom: 0;
@@ -13,7 +13,7 @@
 }
 
 .navbar-icon-block {
-  width: 93px;
+  width: 25vw;
   display: flex;
   justify-content: center;
   align-items: center;
