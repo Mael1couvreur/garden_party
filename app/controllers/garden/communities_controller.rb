@@ -14,6 +14,7 @@ module Garden
 
     def classement
       @order = User.order(score: :desc)
+      @podium = @order[0..2]
       @user = current_user
     end
   end

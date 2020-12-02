@@ -7,16 +7,14 @@
   <%= cl_image_tag current_user.photo.key, class: "avatar-bordered avatar-top-right" %>
 </div>
 
-<% podium = [] %>
-<% @order.each do |position| %>
-    <% user = User.find(position.id) %>
+<% @podium.each do |user| %>
+    <%# <% user = User.find(user.id) %> 
   <div class="ranking">
-    <p id="position"><% podium << @order.index(user) + 1 %></p>
-    <p id="name"> <% podium << user.first_name %></p>
-    <p id="score"><% podium << user.score %> points</p>
+    <p id="position"><%= @podium.index(user) + 1 %></p>
+    <p id="name"> <%= user.first_name %></p>
+    <p id="score"><%= user.score %> points</p>
   </div>
-  <% end %>
-  <%# <%= podium.limit(3) %>  
+<% end %>
 
 
 <img src="https://www.pngitem.com/pimgs/m/47-475004_podium-clipart-award-winning-transparent-background-podium-png.png">
