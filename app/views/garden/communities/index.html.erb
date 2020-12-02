@@ -43,10 +43,10 @@
           </div>
           <div class="like-counter">
             <%= link_to upvote_plant_path(plant.id), method: :patch, remote: true, class:"text-decoration-none" do %>
-              <i class="far fa-heart like-bouton text-secondary"></i>
+              <i class="far fa-heart fa-lg like-bouton text-secondary"></i>
             <% end %>
             <%= link_to dislike_plant_path(plant.id), method: :patch, remote: true, class:"text-decoration-none d-none" do %>
-              <i class="fas fa-heart dislike-bouton text-secondary"></i>
+              <i class="fas fa-heart fa-lg dislike-bouton text-danger"></i>
             <% end %>
             <span><%= plant.like_number %></span>
           </div>
