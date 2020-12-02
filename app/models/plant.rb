@@ -7,5 +7,5 @@ class Plant < ApplicationRecord
 
   has_one_attached :photo
   validates :age_in_days, presence: true
-  validates :photo, presence: true
+  # validates :photo, presence: true
 end
