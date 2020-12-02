@@ -3,7 +3,8 @@
 <%# <% content_for :meta_image, cl_image_path(@garden.photo.path) %>
 
 <div class="top-page-header-messages">
-  <h1 id="title-chat">Discutez avec <%= @chatroom.messages.where.not(user_id: current_user).first.user.first_name %></h1>
+  <h1 id="title-chat">Discutez avec votre voisin</h1>
+  <%#= @chatroom.messages.where.not(user_id: current_user).first.user.first_name %>
 </div>
 
 <%= link_to chatrooms_path do%>
