@@ -30,8 +30,7 @@ import { initChatroomCable } from "../channels/chatroom_channel";
 import { upvote } from "../plugins/upvote";
 import { hideTask } from "../plugins/hideTask";
 import { dislike } from "../plugins/dislike";
-
-
+import { initMapbox } from '../plugins/init_mapbox';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -41,4 +40,5 @@ document.addEventListener('turbolinks:load', () => {
   upvote();
   dislike();
   hideTask();
+  initMapbox();
 });

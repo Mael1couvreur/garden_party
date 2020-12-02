@@ -8,6 +8,8 @@
 require "open-uri"
 
 puts "destruction des données"
+Message.destroy_all
+Chatroom.destroy_all
 Activity.destroy_all
 Task.destroy_all
 Plant.destroy_all
@@ -88,7 +90,7 @@ puts "création des utilisateurs"
 
 user1 = User.create!(
   first_name: "Vio",
-  address: "Chartrons",
+  address: "40 allée Haussmann, Bordeaux",
   score: 0,
   email: "vio@gmail.com",
   password: "abcdef")
@@ -169,6 +171,30 @@ end
 
 puts "taches créées"
 
+puts "création des chatrooms"
 
+chatroom1 = Chatroom.create!(name: "Echange entre Vio et Hugo")
+chatroom2 = Chatroom.create!(name: "Echange entre Mael et Hugo")
+chatroom3 = Chatroom.create!(name: "Echange entre Mael et Vio")
+
+puts "Chatrooms créées"
+
+puts "création des messages"
+
+Message.create!(content: "Salut c'est moi, Hugo", chatroom: chatroom1, user: User.find_by(first_name: "Hugo"))
+Message.create!(content: "Hello, Hugo", chatroom: chatroom1, user: User.find_by(first_name: "Vio"))
+Message.create!(content: "Ca va?", chatroom: chatroom1, user: User.find_by(first_name: "Vio"))
+Message.create!(content: "yes au top", chatroom: chatroom1, user: User.find_by(first_name: "Hugo"))
+
+# Message.create!(content: "Yo ça farte ?", chatroom: chatroom2, user: User.find_by(first_name: "Mael"))
+# Message.create!(content: "tranquille", chatroom: chatroom2, user: User.find_by(first_name: "Hugo"))
+# Message.create!(content: "Cool.", chatroom: chatroom2, user: User.find_by(first_name: "Mael"))
+
+Message.create!(content: "helloooo", chatroom: chatroom3, user: User.find_by(first_name: "Vio"))
+Message.create!(content: "yoooooo", chatroom: chatroom3, user: User.find_by(first_name: "Mael"))
+Message.create!(content: "calme-toi.", chatroom: chatroom3, user: User.find_by(first_name: "Vio"))
+
+puts "messages créés"
+puts "Seeding completed!"
 
 
