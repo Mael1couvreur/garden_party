@@ -1,3 +1,19 @@
+.top-page-header-messages {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 10px;
+  background: linear-gradient(#418530, rgb(72, 138, 62));
+  padding: 4px 8px;
+  height: 48px;
+  h1 {
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+}
+
 .chatroom {
     margin: 21px 7px;
 }
@@ -44,9 +60,6 @@
     background-color: green;
 }
 
-#title-chat {
-    margin: 0px 0px 0px 45px
-}
 
 #chat-date{
     font-size: 12px;
@@ -58,5 +71,14 @@
 #user-name{
     font-weight: bold;
     margin-bottom: 0px;
+}
+
+.bouton-back-header {
+  font-size: 3em;
+  color: white;
+  opacity: 0.6;
+  position: absolute;
+  top: 0px;
+  left: 8px;
 }
 

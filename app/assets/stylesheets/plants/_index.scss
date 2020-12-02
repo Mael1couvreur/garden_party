@@ -4,6 +4,7 @@
   width: 100%;
   flex-wrap: wrap;
   padding: 0 12px;
+  justify-content: space-between;
 }
 
 .top-page-header {
@@ -23,7 +24,7 @@
 
 .bouton-add-a-plant {
   background-color: rgb(72, 138, 62);
-  padding: 20px;
+  padding: 20px 25px;
   border-radius: 50%;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
   .icon-add-a-plant {
@@ -59,7 +60,7 @@
 #photo-user-plant {
     width: 130px;
     height: 130px;
-    margin: 10px 15px;
+    margin: 10px 10px;
     border-radius: 20px;
 }
 

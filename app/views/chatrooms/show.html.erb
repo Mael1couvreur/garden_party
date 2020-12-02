@@ -2,9 +2,14 @@
 <% content_for :meta_description, "Ecrivez votre message" %>
 <%# <% content_for :meta_image, cl_image_path(@garden.photo.path) %>
 
-<div class="top-page-header">
+<div class="top-page-header-messages">
   <h1 id="title-chat">Discutez avec <%= @chatroom.messages.where.not(user_id: current_user).first.user.first_name %></h1>
 </div>
+
+<%= link_to chatrooms_path do%>
+  <i class="fas fa-angle-left bouton-back-header"></i>
+<% end %>
+
 <div class="container">
     <div class="chatroom">
         <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
