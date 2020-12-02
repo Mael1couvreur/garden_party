@@ -90,7 +90,7 @@ puts "création des utilisateurs"
 
 user1 = User.create!(
   first_name: "Vio",
-  address: "Chartrons",
+  address: "40 allée Haussmann, Bordeaux",
   score: 0,
   email: "vio@gmail.com",
   password: "abcdef")

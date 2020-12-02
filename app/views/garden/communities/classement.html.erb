@@ -2,7 +2,22 @@
 <% content_for :meta_description, "Classement général" %>
 <%# <% content_for :meta_image, cl_image_path(@garden.photo.path) %>
 
-<h1 id="header">Classement général</h1>
+<div class="top-page-header">
+  <h1>Classement général</h1>
+  <%= cl_image_tag current_user.photo.key, class: "avatar-bordered avatar-top-right" %>
+</div>
+
+<% @podium.each do |user| %>
+    <%# <% user = User.find(user.id) %> 
+  <div class="ranking">
+    <p id="position"><%= @podium.index(user) + 1 %></p>
+    <p id="name"> <%= user.first_name %></p>
+    <p id="score"><%= user.score %> points</p>
+  </div>
+<% end %>
+
+
+<img src="https://www.pngitem.com/pimgs/m/47-475004_podium-clipart-award-winning-transparent-background-podium-png.png">
 
 <div class="container-ranking">
   <div class="ranking">
@@ -22,6 +37,7 @@
   </div>
   <% end %>
 
+  <% if false %>
   <h1 id="header">Ta position</h1>
     <div class="ranking">
       <p class="headers">Rang</p>
@@ -34,5 +50,6 @@
       <p id="name"> <%= @order.find(current_user.id).first_name %></p>
       <p id="score"><%= @order.find(current_user.id).score %> points</p>
     </div>
+    <% end %>
 
 </div>
