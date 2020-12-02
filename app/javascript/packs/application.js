@@ -30,9 +30,10 @@ import { initChatroomCable } from "../channels/chatroom_channel";
 import { upvote } from "../plugins/upvote";
 import { hideTask } from "../plugins/hideTask";
 import { dislike } from "../plugins/dislike";
+import { imgPreview } from "../plugins/imgPreview";
 
 
-
+const inputElement = document.getElementById('plant_photo');
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
@@ -41,4 +42,35 @@ document.addEventListener('turbolinks:load', () => {
   upvote();
   dislike();
   hideTask();
+  imgPreview();
+
 });
+
+// Preview of upload photo
+
+// function imgPreview () {
+
+//   inputElement.addEventListener("change", (event) => {
+//     const file = document.getElementById('plant_photo').files[0]
+//     console.log(file)
+
+//       // if (!file.type.startsWith('image/')){ continue } // problème de syntaxe
+
+//     const img = document.createElement("img");
+//     img.classList.add("obj");
+//     img.file = file;
+//     img.id = "preview-img"
+
+//     const preview = document.getElementById('preview')
+//     if (document.getElementById('preview-img')){
+//       var img_nested = document.getElementById('preview-img')
+//       preview.removeChild(img_nested)
+//       preview.appendChild(img)
+//     } else {
+//       preview.appendChild(img)
+//     }
+//     const reader = new FileReader();
+//     reader.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(img);
+//     reader.readAsDataURL(file);
+//   });
+// }

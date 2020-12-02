@@ -1,6 +1,6 @@
 <% content_for :meta_title, "Créer une plante" %>
 <% content_for :meta_description, "Ajouter une nouvelle plante" %>
-<%# <% content_for :meta_image, cl_image_path(@garden.photo.path) %> 
+<%# <% content_for :meta_image, cl_image_path(@garden.photo.path) %>
 
 <div class="top-new-plant">
   <%= link_to plants_path do %>
@@ -16,9 +16,13 @@
           <i id="icone-add-photo", class="fas fa-seedling fa-2x navbar-icon"></i>
           <i id="icone-app-photo" class="fas fa-camera"></i>
               <div class="d-none">
-                  <%= f.input :photo, as: :file, label: false %>
+                <%= f.input :photo, as: :file, label: false %>
               </div>
+
           </label>
+          <div id="preview">
+
+          </div>
           <div class="infos-form-plant-new">
               <%= f.input :nickname, label: false, placeholder: "Surnom", input_html: { class: 'champ-form' } %>
               <%= f.input :plant_information, collection: @plant_infos , prompt: "Select you type of plant" %>
@@ -28,3 +32,5 @@
       <% end %>
   </div>
 </div>
+
+
