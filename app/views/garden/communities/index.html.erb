@@ -20,7 +20,7 @@
           <%= plant.user.first_name %>
 
           <%= simple_form_for @chatroom do |f| %>
-            <%= f.input :name, as: :hidden, input_html: { value: "Conversation avec #{plant.user.first_name}" } %>
+            <%= f.input :name, as: :hidden, input_html: { value: "Conversation avec #{plant.user}" } %>
             <%= button_tag type: 'submit', class:"bouton-chat" do %>
               <i class="far fa-comment-dots text-secondary user-chat-from-community"></i>
             <% end %>

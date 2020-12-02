@@ -186,9 +186,9 @@ Message.create!(content: "Hello, Hugo", chatroom: chatroom1, user: User.find_by(
 Message.create!(content: "Ca va?", chatroom: chatroom1, user: User.find_by(first_name: "Vio"))
 Message.create!(content: "yes au top", chatroom: chatroom1, user: User.find_by(first_name: "Hugo"))
 
-Message.create!(content: "Yo ça farte ?", chatroom: chatroom2, user: User.find_by(first_name: "Mael"))
-Message.create!(content: "tranquille", chatroom: chatroom2, user: User.find_by(first_name: "Hugo"))
-Message.create!(content: "Cool.", chatroom: chatroom2, user: User.find_by(first_name: "Mael"))
+# Message.create!(content: "Yo ça farte ?", chatroom: chatroom2, user: User.find_by(first_name: "Mael"))
+# Message.create!(content: "tranquille", chatroom: chatroom2, user: User.find_by(first_name: "Hugo"))
+# Message.create!(content: "Cool.", chatroom: chatroom2, user: User.find_by(first_name: "Mael"))
 
 Message.create!(content: "helloooo", chatroom: chatroom3, user: User.find_by(first_name: "Vio"))
 Message.create!(content: "yoooooo", chatroom: chatroom3, user: User.find_by(first_name: "Mael"))
