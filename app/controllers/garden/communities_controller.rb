@@ -16,6 +16,7 @@ module Garden
       @order = User.order(score: :desc)
       @podium = @order[0..2]
       @user = current_user
+      @ranking = @order[3..-1]
     end
   end
 end
