@@ -36,10 +36,11 @@
 
     <%# Affiche les scores  %>
     <%# @order vient du controller. Array contennant des instances de user dans l'order asc des scores %>
-    <% @order.each do |position| %>
-      <% user = User.find(position.id) %>
+    <% @ranking.each do |user| %>
+      <%# <% user = User.find(position.id) %> 
       <div class="ranking">
-        <p id="position"><%= @order.index(user) + 1 %></p>
+        <p id="position"><%= @ranking.index(user) + 4%> </p> 
+        <%# <% raise %> 
         <p id="name"> <%= user.first_name %></p>
         <p id="score"><%= user.score %> points</p>
       </div>
