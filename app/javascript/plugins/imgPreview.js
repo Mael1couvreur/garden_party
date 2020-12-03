@@ -11,9 +11,10 @@ export function imgPreview () {
     img.file = file;
     img.id = "preview-img"
 
-    const preview = document.getElementById('preview')
-    if (document.getElementById('preview-img')){
-      var img_nested = document.getElementById('preview-img')
+    const preview = document.getElementById('photo-new-plant')
+    if (document.getElementById('icone-app-photo')){
+      var img_nested = document.getElementById('icone-app-photo')
+      preview.removeChild(img_nested)
       preview.removeChild(img_nested)
       preview.appendChild(img)
     } else {
