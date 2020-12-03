@@ -24,24 +24,9 @@
     <% end %>
   </div>
 
-
-
-  <%# <div class="podium-classement">
-    <% @podium.each do |user| %>
-      <%# <div class="ranking-podium">
-        <div class="podium">
-          < id="photo"><%= cl_image_tag user.photo.key, class: "photo-podium avatar-top-right" %>
-          <%# < id="name" class="position #{counter}"> <%= user.first_name %>
-          <%# < id="score"><%= user.score %> 
-        <%# </div> %>
-      <%# </div> %> 
-    <%# <% end %> 
-  <%# </div> %> 
-
-
   <img src="https://www.pngitem.com/pimgs/m/47-475004_podium-clipart-award-winning-transparent-background-podium-png.png" width="400" class="image-podium">
 
-<hr>
+  <hr>
   <%# <div class="container-ranking"> %>
     <div class="ranking">
       <p class="headers"><strong>Rang</strong></p>
@@ -73,7 +58,7 @@
           <p id="name"> <%= @order.find(current_user.id).first_name %></p>
           <p id="score"><%= @order.find(current_user.id).score %> points</p>
         </div>
-      <% end %>
+    <% end %>
 
   <%# </div> %>
 </div>
