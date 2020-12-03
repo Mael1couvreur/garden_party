@@ -14,6 +14,8 @@
 }
 
 #btn-go-index-plant {
+  width: 80vw;
+  margin: 0 auto;
   border: 1px solid white;
   padding: 15px 47px;
   border-radius: 15px;
@@ -23,8 +25,12 @@
   position: absolute;
   top: 573px;
   left: 35px;
+  transition: background-color 1s, color 1s;
     &:hover {
-        background-color: lightgrey;
+      background-color: green;
+      a {
+        color: white;
+      }
     }
 }
 
@@ -43,19 +49,5 @@
   left: 20px;
 }
 
-.logo-home-plant {
-  // top-min: 304px;
-  position: absolute;
-  top: 304px;
-  left: 221px;
-  font-size: 20px;
-  color: white;
-  transition: font-size 5s;
-  // position:sticky;
-}
-
-.growPlant {
-  font-size: 90px !important;
-}
 
 
