@@ -12,6 +12,7 @@ export const imgPreview = () => {
       img.file = file;
       img.id = "preview-img"
 
+
       const preview = document.getElementById('photo-new-plant')
       if (document.getElementById('icone-add-photo')){
         var img_nested1 = document.getElementById('icone-add-photo')
