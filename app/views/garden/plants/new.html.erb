@@ -16,9 +16,13 @@
           <i id="icone-add-photo", class="fas fa-seedling fa-2x navbar-icon"></i>
           <i id="icone-app-photo" class="fas fa-camera"></i>
               <div class="d-none">
-                  <%= f.input :photo, as: :file, label: false %>
+                <%= f.input :photo, as: :file, label: false %>
               </div>
+
           </label>
+          <div id="preview">
+
+          </div>
           <div class="infos-form-plant-new">
               <%= f.input :nickname, label: false, placeholder: "Surnom", input_html: { class: 'champ-form' } %>
               <%= f.input :plant_information, label: 'Type de plante', collection: @plant_infos , prompt: "Selectionne le type de ta plante" %>
@@ -29,3 +33,5 @@
       <% end %>
   </div>
 </div>
+
+
