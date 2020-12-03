@@ -4,7 +4,6 @@
   width: 100vw;
   height: 100vh;
   background: linear-gradient(#08681e, #95c99f);
-
 }
 
 .title-home {
@@ -36,11 +35,27 @@
 }
 
 #garden_party_logo {
-  width: 90vw;
+  width: 78vw;
   height: 28vh;
-  padding-left: 20px;
+  padding-left: 30px;
   position: absolute;
   top: 107px;
   left: 20px;
 }
+
+.logo-home-plant {
+  // top-min: 304px;
+  position: absolute;
+  top: 304px;
+  left: 221px;
+  font-size: 20px;
+  color: white;
+  transition: font-size 5s;
+  // position:sticky;
+}
+
+.growPlant {
+  font-size: 90px !important;
+}
+
 

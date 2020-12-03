@@ -32,6 +32,7 @@ import { hideTask } from "../plugins/hideTask";
 import { dislike } from "../plugins/dislike";
 import { imgPreview } from "../plugins/imgPreview";
 import { initMapbox } from '../plugins/init_mapbox';
+import { initGrowingPlant } from '../plugins/initGrowingPlant';
 
 
 // Internal imports, e.g:
@@ -44,7 +45,7 @@ document.addEventListener('turbolinks:load', () => {
   hideTask();
   imgPreview();
   initMapbox();
-
+  setTimeout(initGrowingPlant(), 2000);
 });
 
 
