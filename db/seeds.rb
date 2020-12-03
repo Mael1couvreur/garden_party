@@ -91,7 +91,7 @@ puts "création des utilisateurs"
 user1 = User.create!(
   first_name: "Vio",
   address: "40 allée Haussmann, Bordeaux",
-  score: rand(100..150),
+  score: rand(130..140),
   email: "vio@gmail.com",
   password: "abcdef")
 file = URI.open('https://avatars1.githubusercontent.com/u/70322815?v=4')
@@ -100,7 +100,7 @@ user1.photo.attach(io: file, filename: 'user1.jpg', content_type: 'image/jpeg')
 user2 = User.create!(
   first_name: "Mael",
   address: "Loin du Wagon",
-  score: rand(100..150),
+  score: rand(100..120),
   email: "mael@gmail.com",
   password: "abcdef")
 file = URI.open('https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1601908758/rtos8nfz2zacii2dndkc.jpg')
@@ -109,7 +109,7 @@ user2.photo.attach(io: file, filename: 'user2.jpg', content_type: 'image/jpeg')
 user3 = User.create!(
   first_name: "Hugo",
   address: "Sainte-Catherine",
-  score: rand(100..150),
+  score: rand(140..150),
   email: "hugo@gmail.com",
   password: "abcdef")
 file = URI.open('https://avatars0.githubusercontent.com/u/69712961?v=4')
