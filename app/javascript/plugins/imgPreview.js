@@ -12,10 +12,13 @@ export const imgPreview = () => {
       img.file = file;
       img.id = "preview-img"
 
-      const preview = document.getElementById('preview')
-      if (document.getElementById('preview-img')){
-        var img_nested = document.getElementById('preview-img')
-        preview.removeChild(img_nested)
+
+      const preview = document.getElementById('photo-new-plant')
+      if (document.getElementById('icone-add-photo')){
+        var img_nested1 = document.getElementById('icone-add-photo')
+        var img_nested2 = document.getElementById('icone-app-photo')
+        preview.removeChild(img_nested1)
+        preview.removeChild(img_nested2)
         preview.appendChild(img)
       } else {
         preview.appendChild(img)
