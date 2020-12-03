@@ -1,6 +1,6 @@
 .container-plants-cards-community {
   margin-top: 8px;
-  width: 375px;
+  width: 100vw;
   padding: 0 12px;
   height: 84vh;
   overflow: scroll;
@@ -17,6 +17,11 @@
   position: absolute;
   bottom: 6px;
   right: 10px;
+  display: flex;
+  flex-direction: row-reverse;
+  span {
+    margin-right: 5px;
+  }
 }
 
 .card-right-side {
@@ -30,6 +35,7 @@
   margin: 16px 8px;
   padding: 8px;
   position: relative;
+  background-color: white;
 }
 
 #photo-user-plant-community {
@@ -41,6 +47,11 @@
 .link-to-classement {
   font-size: 1.8em;
   color: white;
+}
+
+.user-chat-from-community {
+  position: absolute;
+  margin-left: -8px;
 }
 
 
@@ -66,4 +77,12 @@
 .hide-link-decoration {
   text-decoration: none;
   color: black !important;
+}
+
+.bouton-chat {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: 0;
+  background: none;
 }

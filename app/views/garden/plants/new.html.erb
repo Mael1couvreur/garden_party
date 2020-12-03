@@ -25,8 +25,9 @@
           </div>
           <div class="infos-form-plant-new">
               <%= f.input :nickname, label: false, placeholder: "Surnom", input_html: { class: 'champ-form' } %>
-              <%= f.input :plant_information, collection: @plant_infos , prompt: "Select you type of plant" %>
-              <%= f.input :age_in_days, as: :date, discard_day: true, html5: true%>
+              <%= f.input :plant_information, label: 'Type de plante', collection: @plant_infos , prompt: "Selectionne le type de ta plante" %>
+              <%= f.input :age_in_days, label: "Date de naissance", hint: "Approximativement, t'inquiète", as: :date, discard_day: true, html5: true%>
+
           </div>
           <%= f.submit "Créer ma plante", id:"btn-form-new-plant" %>
       <% end %>

@@ -8,21 +8,75 @@
 .ranking {
   display: flex;
   justify-content: space-between;
+}
+
+  .ranking-podium {
+    display: flex;
+  }
+
+  .podium{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .podium-classement{
+    display: flex;
+  }
 
   #position {
     margin-right: 10px;
     margin-left: 10px;
     margin-top: 0px;
     margin-bottom: 0px;
-
   }
 
+.image-podium{
+  margin-left: -26px;
+  margin-top: 141px;
 }
 
-#header {
-  padding: 10px;
-  padding-top: 20px;
-  font-size: 39px;
+.name-podium{
   text-align: center;
+  font-weight: bold;
+  margin-bottom: 0px;
+  margin-top: 20px;
 }
+
+.photo-podium{
+  width: 89px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  border: white 1px solid;
+  margin-top: -15px;
+}
+
+#position0 {
+  position: absolute;
+  margin-left: 131px;
+  margin-top: 1px;
+}
+
+#position1 {
+  position: absolute;
+  margin-left: 17px;
+  margin-top: 15px;
+}
+
+#position2 {
+  position: absolute;
+  margin-left: 241px;
+  margin-top: 30px;
+}
+
+.score-podium{
+  text-align: center;
+  font-size: 12px;
+}
+
+// #header {
+  // padding: 10px;
+  // padding-top: 20px;
+  // font-size: 39px;
+  // text-align: center;
+// }
 
