@@ -194,7 +194,7 @@ file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZUmlRVZX
 plant7.photo.attach(io: file, filename: 'plant7.jpg', content_type: 'image/jpeg')
 
 
-plant8 = Plant.create!(nickname: "Monster", user: User.find_by(first_name: "Hugo"), plant_information: PlantInformation.find_by(name: "Monstera"), age_in_days: 69, like_number: rand(1..50))
+plant8 = Plant.create!(nickname: "Walter", user: User.find_by(first_name: "Hugo"), plant_information: PlantInformation.find_by(name: "Monstera"), age_in_days: 69, like_number: rand(1..50))
 file = URI.open('https://cdn.shopify.com/s/files/1/0013/3529/6118/products/gallery_secondary_monstera-deliciosa-6.jpg?v=1588504371')
 plant8.photo.attach(io: file, filename: 'plant8.jpg', content_type: 'image/jpeg')
 
