@@ -7,7 +7,10 @@
     <i class="fas fa-medal link-to-classement"></i>
   <% end %>
   <h1>Community</h1>
-  <%= cl_image_tag current_user.photo.key, class: "avatar-bordered avatar-top-right" %>
+  <%= cl_image_tag current_user.photo.key, class: "avatar-bordered avatar-top-right dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+    <%= link_to "Se déconnecter", destroy_user_session_path , class: "dropdown-item", method: :delete %>
+  </div>
 </div>
 
 <div class="container-plants-cards-community">
