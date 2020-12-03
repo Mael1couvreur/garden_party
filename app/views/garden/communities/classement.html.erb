@@ -2,10 +2,14 @@
 <% content_for :meta_description, "Classement général" %>
 <%# <% content_for :meta_image, cl_image_path(@garden.photo.path) %>
 
-<div class="top-page-header">
+<div class="top-page-header-classement">
   <h1>Classement général</h1>
   <%= cl_image_tag current_user.photo.key, class: "avatar-bordered avatar-top-right" %>
 </div>
+
+<%= link_to communities_path do%>
+  <i class="fas fa-angle-left bouton-back-header"></i>
+<% end %>
 
 <div class="container">
   <div class="podium-classement">
@@ -24,23 +28,23 @@
     <% end %>
   </div>
 
-  <img src="https://www.pngitem.com/pimgs/m/47-475004_podium-clipart-award-winning-transparent-background-podium-png.png" width="400" class="image-podium">
+  <img src="https://www.pngitem.com/pimgs/m/47-475004_podium-clipart-award-winning-transparent-background-podium-png.png" width="350" class="image-podium">
 
   <hr>
   <%# <div class="container-ranking"> %>
     <div class="ranking">
       <p class="headers"><strong>Rang</strong></p>
       <p class="headers"><strong>Jardinier</strong></p>
-      <p class="headers"><strong>Score</strong></p>
+      <p class="headers mr-2"><strong>Score</strong></p>
     </div>
 
     <%# Affiche les scores  %>
     <%# @order vient du controller. Array contennant des instances de user dans l'order asc des scores %>
     <% @ranking.each do |user| %>
-      <%# <% user = User.find(position.id) %> 
+      <%# <% user = User.find(position.id) %>
       <div class="ranking">
-        <p id="position"><%= @ranking.index(user) + 4%> </p> 
-        <%# <% raise %> 
+        <p id="position"><%= @ranking.index(user) + 4%> </p>
+        <%# <% raise %>
         <p id="name"> <%= user.first_name %></p>
         <p id="score"><%= user.score %> points</p>
       </div>
