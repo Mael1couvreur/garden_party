@@ -12,9 +12,9 @@
 <div class="container">
   <div class="form-new-plant">
       <%= simple_form_for [ @plant ] do |f| %>
-          <label id="photo-new-plant", class="border p-5">
-          <i class="icone-add-photo", class="fas fa-seedling fa-2x navbar-icon"></i>
-          <i class="icone-app-photo" class="fas fa-camera"></i>
+          <label id="photo-new-plant", class="border">
+          <i id="icone-add-photo", class="fas fa-seedling fa-2x navbar-icon"></i>
+          <i id="icone-app-photo" class="fas fa-camera"></i>
               <div class="d-none">
                 <%= f.input :photo, as: :file, label: false %>
               </div>
