@@ -6,6 +6,10 @@
   <div class="plant-picture" style="background-image: url('<%= cl_image_path @plant.photo.key, height: 300, width: 375, crop: :fill %>')">
   </div>
 
+  <%= link_to plants_path do%>
+    <i class="fas fa-angle-left bouton-back-header-show-plant"></i>
+  <% end %>
+
   <div class="principal-infos">
     <h1><%= @plant.nickname %></h1>
     <h3><%= @plant.plant_information.name %> - <%= @plant.plant_information.family%></h3>
