@@ -2,7 +2,7 @@
   display: flex;
   background: linear-gradient(#418530, #0E550C);
   width: 100vw;
-  height: 80px;
+  height: 70px;
   position: fixed;
   bottom: 0;
   z-index: 999;
@@ -33,6 +33,7 @@
     background-color: #26551D;
     // box-shadow:
     border-radius: 50%;
+    box-shadow: inset 0px 9px 1px rgba(0,0,0,0.3);
   }
 }
 

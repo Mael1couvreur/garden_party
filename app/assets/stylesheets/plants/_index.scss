@@ -47,9 +47,6 @@
 .plant-age {
     font-size: 12px;
     text-align: center;
-    &:hover {
-        font-weight: bold;
-    }
 }
 
 #nickname-list-user-plant{
@@ -71,7 +68,7 @@
     margin: 7px 7px;
     &:hover {
         font-weight: bold;
-        box-shadow: 5px 5px 16px rgba(0,0,0,0.3);
+        box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
     }
 }
 
