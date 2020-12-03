@@ -7,49 +7,58 @@
   <%= cl_image_tag current_user.photo.key, class: "avatar-bordered avatar-top-right" %>
 </div>
 
-<% @podium.each do |user| %>
-    <%# <% user = User.find(user.id) %> 
-  <div class="ranking">
-    <p id="position"><%= @podium.index(user) + 1 %></p>
-    <p id="name"> <%= user.first_name %></p>
-    <p id="score"><%= user.score %> points</p>
-  </div>
-<% end %>
-
-
-<img src="https://www.pngitem.com/pimgs/m/47-475004_podium-clipart-award-winning-transparent-background-podium-png.png">
-
-<div class="container-ranking">
-  <div class="ranking">
-    <p class="headers">Rang</p>
-    <p class="headers">Gardeneur</p>
-    <p class="headers">Score</p>
+<div class="container">
+  <div class="podium-classement">
+    <% counter = 0 %>
+    <% until counter == 3 %>
+      <div class="ranking-podium">
+        <div class="podium">
+          <div id= "position<%= counter %>">
+            <p id="name<%= counter  %>" class="name-podium"> <%= @podium[counter].first_name %></p>
+            <p id="score<%= counter  %>" class="score-podium"><%= @podium[counter].score %> points</p>
+            <p id="photo<%= counter  %>"><%= cl_image_tag @podium[counter].photo.key, class: "photo-podium avatar-top-right" %></p>
+          </div>
+          <% counter += 1 %>
+        </div>
+      </div>
+    <% end %>
   </div>
 
-  <%# Affiche les scores  %>
-  <%# @order vient du controller. Array contennant des instances de user dans l'order asc des scores %>
-  <% @order.each do |position| %>
-    <% user = User.find(position.id) %>
-  <div class="ranking">
-    <p id="position"><%= @order.index(user) + 1 %></p>
-    <p id="name"> <%= user.first_name %></p>
-    <p id="score"><%= user.score %> points</p>
-  </div>
-  <% end %>
+  <img src="https://www.pngitem.com/pimgs/m/47-475004_podium-clipart-award-winning-transparent-background-podium-png.png" width="400" class="image-podium">
 
-  <% if false %>
-  <h1 id="header">Ta position</h1>
+  <hr>
+  <%# <div class="container-ranking"> %>
     <div class="ranking">
-      <p class="headers">Rang</p>
-      <p class="headers">Gardeneur</p>
-      <p class="headers">Score</p>
+      <p class="headers"><strong>Rang</strong></p>
+      <p class="headers"><strong>Jardinier</strong></p>
+      <p class="headers"><strong>Score</strong></p>
     </div>
 
-    <div class="ranking">
-      <p id="position"><%= @order.index(current_user) + 1 %></p>
-      <p id="name"> <%= @order.find(current_user.id).first_name %></p>
-      <p id="score"><%= @order.find(current_user.id).score %> points</p>
-    </div>
+    <%# Affiche les scores  %>
+    <%# @order vient du controller. Array contennant des instances de user dans l'order asc des scores %>
+    <% @order.each do |position| %>
+      <% user = User.find(position.id) %>
+      <div class="ranking">
+        <p id="position"><%= @order.index(user) + 1 %></p>
+        <p id="name"> <%= user.first_name %></p>
+        <p id="score"><%= user.score %> points</p>
+      </div>
     <% end %>
 
+    <% if false %>
+      <h1 id="header">Ta position</h1>
+        <div class="ranking">
+          <p class="headers">Rang</p>
+          <p class="headers">Gardeneur</p>
+          <p class="headers">Score</p>
+        </div>
+
+        <div class="ranking">
+          <p id="position"><%= @order.index(current_user) + 1 %></p>
+          <p id="name"> <%= @order.find(current_user.id).first_name %></p>
+          <p id="score"><%= @order.find(current_user.id).score %> points</p>
+        </div>
+    <% end %>
+
+  <%# </div> %>
 </div>
